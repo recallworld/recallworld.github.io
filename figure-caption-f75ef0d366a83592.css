@@ -1,7 +1,0 @@
-/* Keep this result caption aligned with its own full-width panel. */
-#figure-5 .method-figure figcaption {
-  max-width: none;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-}
