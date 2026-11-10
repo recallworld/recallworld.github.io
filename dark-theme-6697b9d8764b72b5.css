@@ -1,0 +1,214 @@
+/* A dark showcase skin; the academic template retains its typography. */
+:root {
+  color-scheme: dark;
+  --page-background: #050505;
+  --panel-background: #16171b;
+  --ink: #e2e4e9;
+  --muted: #adb3bd;
+  --border: #383c45;
+  --link-color: #79bcff;
+  --brand-text: #e58a9b;
+}
+
+html,
+body,
+main,
+main > .hero,
+main > .section,
+main > .hero.is-light,
+.footer {
+  background: var(--page-background);
+  color: var(--ink);
+}
+
+.title,
+.subtitle,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content strong,
+strong,
+.hero.is-light .title,
+.hero.is-light .subtitle,
+.hero.is-light strong,
+.world-card h3 {
+  color: #f8f9fc;
+}
+
+a {
+  color: var(--link-color);
+}
+
+.hero.is-light a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current) {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: #b4daff;
+}
+
+.hero.is-light a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current):hover {
+  color: #b4daff;
+}
+
+.publication-authors[aria-label="Authors"] a[href] {
+  color: var(--link-color) !important;
+}
+
+.publication-authors[aria-label="Authors"] a[href]:hover {
+  color: #b4daff !important;
+}
+
+.publication-authors sup,
+.publication-affiliations,
+.source-caption {
+  color: var(--muted);
+}
+
+.navworld-title,
+.navworld-name,
+.world-status {
+  color: var(--brand-text);
+}
+
+/* Tighten the title/resources and the opening demo without resizing type. */
+main > .hero[aria-labelledby="paper-title"] > .hero-body {
+  padding-bottom: .75rem;
+}
+
+#paper-title {
+  margin-bottom: .7rem;
+}
+
+.publication-affiliations {
+  margin-top: .1rem;
+}
+
+.publication-affiliations + .column {
+  padding-top: .15rem;
+  padding-bottom: .15rem;
+}
+
+.publication-links .button.is-dark {
+  background: #202228;
+  border: 1px solid #4b505c;
+  color: #f8f9fc;
+}
+
+.publication-links .button.is-dark:hover {
+  background: #2a2e38;
+  border-color: #79bcff;
+  color: #fff;
+}
+
+#headline-comparison {
+  padding-top: 1.25rem;
+}
+
+#headline-comparison-title {
+  margin-bottom: .85rem;
+}
+
+.source-heading {
+  margin-bottom: .4rem;
+}
+
+.source-selector {
+  margin-bottom: .8rem;
+}
+
+.source-nav {
+  background: #202228;
+  border-color: #555c69;
+  color: #e6e9ef;
+  box-shadow: 0 3px 12px #0009;
+}
+
+.source-nav:hover {
+  color: #fff;
+  border-color: #79bcff;
+  background: #2a2e38;
+  box-shadow: 0 4px 18px #000b;
+}
+
+.source-dot::before {
+  background: #8b929e;
+}
+
+.source-dot[aria-pressed="true"]::before {
+  background: var(--brand-text);
+}
+
+.world-toolbar select {
+  background: #202228;
+  color: #e2e4e9;
+  border-color: #555c69;
+}
+
+.world-toolbar select:hover {
+  border-color: #79bcff;
+}
+
+.headline-frame,
+.world-frame,
+.method-figure > img,
+.wide-field-figure > img {
+  box-shadow: 0 12px 30px #0009, 0 0 0 1px #ffffff26;
+}
+
+/* Scientific raster colors are retained, including their white canvas. */
+.method-figure > img,
+.wide-field-figure > img {
+  border-color: #535965;
+}
+
+#visibility .method-figure {
+  max-width: 640px;
+  margin: 1.3rem auto 1.6rem;
+}
+
+#visibility .method-figure figcaption {
+  max-width: 640px;
+}
+
+figcaption p,
+.footer p {
+  color: var(--muted);
+}
+
+.interaction-hint {
+  color: var(--muted) !important;
+}
+
+.footer .icon-link {
+  color: var(--link-color);
+}
+
+/* Hover is visual only; players, drag controls and media bounds stay intact. */
+@media (hover: hover) and (pointer: fine) {
+  .headline-frame,
+  .world-frame,
+  .method-figure > img,
+  .wide-field-figure > img {
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .headline-frame:hover,
+  .world-card:hover .world-frame,
+  .method-figure > img:hover,
+  .wide-field-figure > img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 42px #000c, 0 0 0 1px #e58a9b80;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .headline-frame,
+  .world-frame,
+  .method-figure > img,
+  .wide-field-figure > img {
+    transition: none;
+    transform: none !important;
+  }
+}

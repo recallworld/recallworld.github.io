@@ -1,0 +1,21 @@
+/* GOFish author-link underline; retain the academic template typography. */
+.publication-authors[aria-label="Authors"] a[href] {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size .3s ease, color .2s ease;
+}
+.publication-authors[aria-label="Authors"] a[href]:hover,
+.publication-authors[aria-label="Authors"] a[href]:focus-visible {
+  background-size: 100% 1.5px;
+}
+@media (hover: none) {
+  .publication-authors[aria-label="Authors"] a[href]:hover {
+    background-size: 0% 1.5px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .publication-authors[aria-label="Authors"] a[href] { transition: none; }
+}

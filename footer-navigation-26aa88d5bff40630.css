@@ -1,0 +1,171 @@
+.explore-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4em;
+  margin: 1.5rem auto 0;
+  color: var(--muted);
+}
+.explore-more a,
+.colophon .plain-link {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size .25s ease;
+}
+.explore-more a:hover,
+.explore-more a:focus-visible,
+.colophon .plain-link:hover,
+.colophon .plain-link:focus-visible {
+  background-size: 100% 1px;
+}
+.explore-more svg {
+  width: 1em;
+  height: 1em;
+  color: var(--link-color);
+}
+#gallery {
+  scroll-margin-top: 1rem;
+}
+.footer-resources {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2.25rem 1.5rem .25rem;
+}
+.footer-resources .icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--ink);
+  font-size: 1.65rem;
+}
+.footer-resources .icon-link[aria-disabled="true"] {
+  cursor: default;
+}
+.footer .template-credit {
+  font-size: .8rem;
+  margin-bottom: 1.25rem;
+}
+.colophon p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  margin: 0;
+}
+.colophon .plain-link {
+  color: var(--ink);
+}
+.colophon-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+.colophon-toggle:hover {
+  background: var(--panel-background);
+}
+.colophon-toggle:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 3px;
+}
+.theme-icon-wrap {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+}
+.theme-icon {
+  position: absolute;
+}
+.theme-icon-moon {
+  display: none;
+}
+html[data-theme="light"] {
+  color-scheme: light;
+  --page-background: #fafafa;
+  --panel-background: #f0f1f4;
+  --ink: #262b33;
+  --muted: #56616f;
+  --border: #d6dbe2;
+  --link-color: #17649c;
+  --brand-text: #941f30;
+}
+html[data-theme="light"] .title,
+html[data-theme="light"] .subtitle,
+html[data-theme="light"] .content h1,
+html[data-theme="light"] .content h2,
+html[data-theme="light"] .content h3,
+html[data-theme="light"] .content h4,
+html[data-theme="light"] strong,
+html[data-theme="light"] .hero.is-light .title,
+html[data-theme="light"] .hero.is-light .subtitle,
+html[data-theme="light"] .world-card h3,
+html[data-theme="light"] .result-subtitle,
+html[data-theme="light"] .result-table thead th {
+  color: var(--ink);
+}
+html[data-theme="light"] .publication-affiliations a[href] {
+  color: var(--ink) !important;
+}
+html[data-theme="light"] a:not(.button):hover,
+html[data-theme="light"] .hero.is-light a:not(.button):hover,
+html[data-theme="light"] .publication-authors[aria-label="Authors"] a[href]:hover {
+  color: #0d497b !important;
+}
+html[data-theme="light"] .world-toolbar select {
+  background: #fff;
+  color: var(--ink);
+  border-color: #aeb7c3;
+}
+html[data-theme="light"] .result-slide {
+  background: #fff;
+  border-color: var(--border);
+}
+html[data-theme="light"] .result-table th,
+html[data-theme="light"] .result-table td {
+  border-color: var(--border);
+}
+html[data-theme="light"] .result-table .result-group th,
+html[data-theme="light"] .result-table .result-empty {
+  color: var(--muted);
+}
+html[data-theme="light"] .result-table .result-ours {
+  background: #f7ecef;
+}
+html[data-theme="light"] .result-table .result-ours th {
+  color: var(--brand-text);
+}
+html[data-theme="light"] .headline-frame,
+html[data-theme="light"] .world-frame,
+html[data-theme="light"] .method-figure > img,
+html[data-theme="light"] .wide-field-figure > img,
+html[data-theme="light"] .results-viewport {
+  box-shadow: 0 10px 28px #1a253018, 0 0 0 1px #00000016;
+}
+html[data-theme="light"] .theme-icon-sun {
+  display: none;
+}
+html[data-theme="light"] .theme-icon-moon {
+  display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  .explore-more a,
+  .colophon .plain-link {
+    transition: none;
+  }
+}
