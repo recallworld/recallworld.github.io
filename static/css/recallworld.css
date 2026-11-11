@@ -1650,3 +1650,11 @@ html[data-theme="light"] .theme-icon-moon  {
 #headline-frame .recallworld-video-label[hidden]  {
   display:none !important;
 }
+
+/* 14. gallery-labels-c0f58ed5d73e93c8 */
+/* Match the compact method labels used by the native fisheye comparisons. */
+.world-card .world-label  {
+  font-size: 14px;
+  line-height: 1.15;
+  max-width: calc(50% - 20px);
+}
