@@ -1658,3 +1658,23 @@ html[data-theme="light"] .theme-icon-moon  {
   line-height: 1.15;
   max-width: calc(50% - 20px);
 }
+
+/* 15. branding-logo-c91b367c90c8b923 */
+.publication-title .recallworld-logo  {
+  display: block;
+  width: min(520px, 85%);
+  height: auto;
+  margin: 0 auto 0.65rem;
+}
+
+.publication-title .recallworld-subtitle  {
+  display: block;
+}
+
+@media (max-width: 600px)  {
+  .publication-title .recallworld-logo  {
+    width: 94%;
+    max-width: 360px;
+    margin-bottom: 0.55rem;
+  }
+}
