@@ -1679,7 +1679,7 @@ html[data-theme="light"] .theme-icon-moon  {
   }
 }
 
-/* 16. memory-carousel-5f0ec202dd794529 */
+/* 16. memory-carousel-8d5bc1a9745f315b */
 /* The two memory figures share the visibility panel's width and caption edge. */
 #wide-field .memory-carousel  {
   max-width: 640px;
@@ -1742,7 +1742,11 @@ html[data-theme="light"] .theme-icon-moon  {
   margin-top: .9rem;
 }
 
-.memory-arrow  {
+.memory-arrow.source-nav  {
+  position: static;
+  inset: auto;
+  transform: none;
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1751,6 +1755,11 @@ html[data-theme="light"] .theme-icon-moon  {
   border: 0;
   border-radius: 50%;
   padding: 0;
+}
+
+.memory-arrow.source-nav::before  {
+  content: none;
+  display: none;
 }
 
 .memory-arrow svg  {
