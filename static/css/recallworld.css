@@ -1678,3 +1678,134 @@ html[data-theme="light"] .theme-icon-moon  {
     margin-bottom: 0.55rem;
   }
 }
+
+/* 16. memory-carousel-5f0ec202dd794529 */
+/* The two memory figures share the visibility panel's width and caption edge. */
+#wide-field .memory-carousel  {
+  max-width: 640px;
+  margin: 1.3rem auto 1.6rem;
+}
+
+.memory-viewport  {
+  display: flex;
+  align-items: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+
+.memory-viewport::-webkit-scrollbar  {
+  display: none;
+}
+
+#wide-field .memory-slide  {
+  flex: 0 0 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.memory-artwork  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1400 / 1058;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #535965;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px #0009, 0 0 0 1px #ffffff26;
+}
+
+#wide-field .memory-artwork img  {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+#wide-field .memory-slide figcaption  {
+  max-width: none;
+  width: 100%;
+  margin: 1.1rem 0 0;
+}
+
+.memory-controls  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: .9rem;
+}
+
+.memory-arrow  {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.memory-arrow svg  {
+  width: 19px;
+  height: 19px;
+}
+
+.memory-dots  {
+  display: flex;
+  gap: 12px;
+}
+
+.memory-dot  {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border: 1px solid #d5d5d5;
+  border-radius: 50%;
+  background: #444;
+}
+
+.memory-dot[aria-pressed="true"]  {
+  background: #fff;
+}
+
+.memory-position  {
+  min-width: 2.5rem;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+html[data-theme="light"] .memory-dot  {
+  background: #bbb;
+  border-color: #555;
+}
+
+html[data-theme="light"] .memory-dot[aria-pressed="true"]  {
+  background: #941f30;
+}
+
+@media (hover: hover) and (pointer: fine)  {
+  .memory-artwork  {
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+  .memory-artwork:hover  {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px #000b;
+  }
+}
+
+@media (prefers-reduced-motion: reduce)  {
+  .memory-artwork  {
+    transition: none;
+  }
+  .memory-artwork:hover  {
+    transform: none;
+  }
+}

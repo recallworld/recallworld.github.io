@@ -34,6 +34,8 @@
 
 
 
+
+<script defer src="js/memory-carousel-57b6d47ccac27edc.js"></script>
 </head>
 <body>
   <main id="top">
@@ -144,7 +146,26 @@
   <div class="column content"><h3 class="title is-5">Resolve Visibility</h3><p>Combine appearance only after resolving depth conflicts, preserving which surface lies in front.</p></div>
   </div></div></section>
 <section id="wide-field" class="section hero is-light" aria-labelledby="wide-field-title"><div class="container is-max-desktop"><h2 id="wide-field-title" class="title is-3 has-text-centered">Unified World Memory</h2><div class="content has-text-justified section-copy"><p><strong>Perspective and fisheye observations. One spatial memory.</strong>
-    <span class="navworld-name">RecallWorld</span> retains observed geometry and appearance beyond the initial perspective field of view, so wider fisheye coverage can guide generation as those surfaces enter the camera's view.</p></div><figure class="wide-field-figure"><img src="assets/paper-20261117/6c9ead37cce5a4a969199d83b041d59e958fc9141bf552720a43429b5acbd6ee.png" loading="lazy" width="1400" height="953" alt="Camera-aware memory: native fisheye input, calibrated camera path, SANA-WM and RecallWorld revisit generations."><figcaption><p><strong>Remember what the initial perspective image misses.</strong> On <a href="https://arxiv.org/abs/2602.18164" target="_blank" rel="noopener noreferrer">GrandTour</a>, <span class="navworld-name">RecallWorld-PF</span> retains the outlined façade from the wider fisheye observation; <span class="navworld-name">RecallWorld</span> uses only its perspective portion.</p></figcaption></figure></div></section>
+    <span class="navworld-name">RecallWorld</span> retains observed geometry and appearance beyond the initial perspective field of view, so wider fisheye coverage can guide generation as those surfaces enter the camera's view.</p></div><div id="memory-carousel" class="memory-carousel" role="region"
+  aria-roledescription="carousel" aria-label="Unified world memory figures" tabindex="0">
+  <div class="memory-viewport"><figure id="memory-slide-0" class="wide-field-figure memory-slide"><div class="memory-artwork"><img src="assets/paper-20261117/6c9ead37cce5a4a969199d83b041d59e958fc9141bf552720a43429b5acbd6ee.png" loading="lazy" width="1400" height="953" alt="Camera-aware memory: native fisheye input, calibrated camera path, SANA-WM and RecallWorld revisit generations."></div><figcaption><p><strong>Remember what the initial perspective image misses.</strong> On <a href="https://arxiv.org/abs/2602.18164" target="_blank" rel="noopener noreferrer">GrandTour</a>, <span class="navworld-name">RecallWorld-PF</span> retains the outlined façade from the wider fisheye observation; <span class="navworld-name">RecallWorld</span> uses only its perspective portion.</p></figcaption></figure><figure id="memory-slide-1" class="wide-field-figure memory-slide" aria-hidden="true" inert>
+  <div class="memory-artwork"><img src="assets/unified-memory/0155b188930f03cf11224f602198f8e3487772a312d4d543e463c540df1b0c2a.jpg"
+    loading="lazy" width="800" height="512"
+    alt="Figure S3: a pixel outside the dashed perspective crop follows its viewing ray to the corresponding 3D point in a Scenelet."></div>
+  <figcaption><p><strong>Wider observations become lasting memory.</strong>
+    Camera-aware ray lifting maps a pixel outside the perspective crop into a Scenelet.
+    The dashed boundary marks the extra scene coverage retained from the fisheye image.</p></figcaption>
+</figure></div>
+  <div class="memory-controls">
+    <button type="button" class="memory-arrow source-nav" data-memory-previous aria-label="Previous memory figure"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="memory-dots" aria-label="Choose a memory figure">
+      <button type="button" class="memory-dot" data-memory-slide="0" aria-label="Perspective and fisheye memory" aria-controls="memory-slide-0" aria-pressed="true"></button>
+      <button type="button" class="memory-dot" data-memory-slide="1" aria-label="Camera-aware ray lifting, Figure S3" aria-controls="memory-slide-1" aria-pressed="false"></button>
+    </div>
+    <output class="memory-position" aria-live="polite" aria-atomic="true">1 / 2</output>
+    <button type="button" class="memory-arrow source-nav" data-memory-next aria-label="Next memory figure"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  </div>
+</div></div></section>
 <section id="visibility" class="section" aria-labelledby="visibility-title"><div class="container is-max-desktop"><h2 id="visibility-title" class="title is-3 has-text-centered">Visibility-Guided Generation</h2><div class="content has-text-justified section-copy"><p><strong>Memory must respect what the camera can see.</strong>
     <span class="navworld-name">RecallWorld</span> resolves depth conflicts before fusing appearance, preventing farther projections from replacing an occluding front surface.</p></div><figure class="method-figure"><img src="assets/paper-20261117/78c610833f1fbbc49c1c2ca66119f60ec3b0cb1e2a7e414b4338fcf5174df27d.png" loading="lazy" width="1400" height="1058" alt="Overlapping Scenelets, front-most Scenelet map, generation without visibility, visibility-resolved generation and ground truth."><figcaption><p><strong>Front surfaces stay in front.</strong> Our visibility guidance resolves conflicting projections before combining appearance. This <a href="https://arxiv.org/abs/2602.18164" target="_blank" rel="noopener noreferrer">GrandTour</a> example shows the resulting spatial condition.</p></figcaption></figure></div></section>
 <section id="gallery" class="section hero is-light" aria-labelledby="gallery-title"><div class="container is-max-desktop"><h2 id="gallery-title" class="title is-3 has-text-centered">Explore the Worlds</h2><p class="has-text-centered mb-5">Compare RecallWorld and other methods with Ground Truth.</p><div class="worlds-carousel"><div class="worlds-navigation" aria-label="Choose a gallery set">
