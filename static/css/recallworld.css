@@ -2324,3 +2324,55 @@ html[data-theme="light"] .content strong, html[data-theme="light"] .hero.is-ligh
     width: min(100%, 140px);
   }
 }
+
+/* 22. lantern-teaser-668b8b82d5415e5c */
+/* Lantern teaser uses the native 640x352 aspect and its own matched clip scores. */
+#headline-comparison .quad-stage  {
+  aspect-ratio:640/352;
+}
+
+#headline-comparison .quad-label  {
+  text-align:center;
+}
+
+#headline-comparison .quad-method  {
+  display:block;
+}
+
+#headline-comparison .quad-metrics  {
+  display:grid;
+  gap:2px;
+  margin-top:5px;
+  font-size:clamp(10px,1vw,13px);
+  line-height:1.15;
+}
+
+#headline-comparison .quad-camera  {
+  position:absolute;
+  z-index:2;
+  right:12px;
+  top:52px;
+  width:100px;
+  height:auto;
+  pointer-events:none;
+}
+
+#wide-field .section-copy strong  {
+  text-align:center;
+}
+
+@media(max-width:600px) {
+  #headline-comparison .quad-label  {
+    font-size:11px;
+  }
+  #headline-comparison .quad-metrics  {
+    font-size:10px;
+    gap:1px;
+    margin-top:3px;
+  }
+  #headline-comparison .quad-camera  {
+    right:8px;
+    top:34px;
+    width:54px;
+  }
+}
