@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://recallworld.github.io/sitemap.xml
