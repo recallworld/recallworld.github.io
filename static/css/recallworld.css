@@ -2325,14 +2325,16 @@ html[data-theme="light"] .content strong, html[data-theme="light"] .hero.is-ligh
   }
 }
 
-/* 22. lantern-teaser-668b8b82d5415e5c */
-/* Lantern teaser uses the native 640x352 aspect and its own matched clip scores. */
+/* 22. lantern-teaser-450dfbb4c258f1e5 */
+/* Lantern street: native video aspect, prominent matched-clip metrics. */
 #headline-comparison .quad-stage  {
   aspect-ratio:640/352;
 }
 
 #headline-comparison .quad-label  {
   text-align:center;
+  font-family:"Google Sans","Noto Sans",sans-serif;
+  font-size:clamp(12px,1.8vw,24px);
 }
 
 #headline-comparison .quad-method  {
@@ -2341,20 +2343,11 @@ html[data-theme="light"] .content strong, html[data-theme="light"] .hero.is-ligh
 
 #headline-comparison .quad-metrics  {
   display:grid;
-  gap:2px;
-  margin-top:5px;
-  font-size:clamp(10px,1vw,13px);
-  line-height:1.15;
-}
-
-#headline-comparison .quad-camera  {
-  position:absolute;
-  z-index:2;
-  right:12px;
-  top:52px;
-  width:100px;
-  height:auto;
-  pointer-events:none;
+  gap:4px;
+  margin-top:6px;
+  font-size:1em;
+  font-weight:400;
+  line-height:1.2;
 }
 
 #wide-field .section-copy strong  {
@@ -2363,16 +2356,10 @@ html[data-theme="light"] .content strong, html[data-theme="light"] .hero.is-ligh
 
 @media(max-width:600px) {
   #headline-comparison .quad-label  {
-    font-size:11px;
+    font-size:clamp(12px,3.33vw,14px);
   }
   #headline-comparison .quad-metrics  {
-    font-size:10px;
-    gap:1px;
-    margin-top:3px;
-  }
-  #headline-comparison .quad-camera  {
-    right:8px;
-    top:34px;
-    width:54px;
+    gap:2px;
+    margin-top:4px;
   }
 }
