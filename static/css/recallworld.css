@@ -2363,3 +2363,74 @@ html[data-theme="light"] .content strong, html[data-theme="light"] .hero.is-ligh
     margin-top:4px;
   }
 }
+
+/* 23. revisit-magnifier-216cbf50b3f2d464 */
+#figure-5 .revisit-magnifier  {
+  --revisit-zoom-x: 50%;
+  --revisit-zoom-y: 50%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 4px;
+  cursor: zoom-in;
+  touch-action: pan-y;
+}
+
+#figure-5 .revisit-magnifier > img  {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  transform-origin: var(--revisit-zoom-x) var(--revisit-zoom-y);
+}
+
+#figure-5 .revisit-magnifier.is-zoomed  {
+  cursor: zoom-out;
+}
+
+#figure-5 .revisit-magnifier.is-zoomed > img  {
+  transform: scale(4);
+}
+
+#figure-5 .revisit-magnifier:focus-visible  {
+  outline: 3px solid #ed7395;
+  outline-offset: 4px;
+}
+
+#bibtex .bibtex-container  {
+  padding: 1.15rem 1.5rem;
+  border: 1px solid #7776;
+  border-radius: 8px;
+  text-align: left;
+}
+
+#bibtex .bibtex-pending  {
+  color: #d5d5d5;
+  margin: 0;
+}
+
+html[data-theme="light"] #bibtex .bibtex-pending, body.light-theme #bibtex .bibtex-pending  {
+  color: #383838;
+}
+
+/* 24. readable-method-labels-b1962260bfc5c7c5 */
+/* Keep method labels legible within the native academic table styles. */
+html:not([data-theme="light"]) .result-table tbody th, html:not([data-theme="light"]) .result-table tbody td:first-child  {
+  color: #e0e3e9;
+}
+
+html:not([data-theme="light"]) .result-table .result-group th  {
+  color: #c2c7d0;
+}
+
+html:not([data-theme="light"]) .result-table .result-ours th  {
+  color: #f2a0b3;
+}
+
+html[data-theme="light"] .result-table tbody th, html[data-theme="light"] .result-table tbody td:first-child  {
+  color: #343842;
+}
+
+html[data-theme="light"] .result-table .result-ours th  {
+  color: #941f30;
+}
