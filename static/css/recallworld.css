@@ -1028,7 +1028,7 @@ figcaption p, .footer p  {
   }
 }
 
-/* 08. Results carousel and tables */
+/* 08. result-tables-fbb77b8c59e3495d */
 #results-carousel .results-tabs  {
   display: flex;
   flex-wrap: wrap;
@@ -1135,9 +1135,10 @@ figcaption p, .footer p  {
 .result-table thead th  {
   color: #f8f9fc;
   font-weight: 700;
+  text-align: center;
 }
 
-.result-table th:first-child  {
+.result-table th[scope="row"], .result-table thead tr:first-child th:first-child, .result-table .result-group th  {
   text-align: left;
 }
 
