@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css?v=af1e6edc875a">
   <link rel="stylesheet" href="static/css/academicons.min.css?v=d1ad1d52e508">
   <link rel="stylesheet" href="static/css/academic-template.css?v=d7034a9a374d">
-  <link rel="stylesheet" href="static/css/recallworld.css?v=76313ad34a7e0c25">
+  <link rel="stylesheet" href="static/css/recallworld.css?v=ce576dcd2cd1ba83">
   
 
 
@@ -64,7 +64,7 @@
 
 
 
-<script defer src="js/memory-carousel-72e3a2707b92d690.js"></script>
+<script defer src="js/memory-carousel-b6a70d207c92c316.js"></script>
 
 
 <script defer src="js/quad-pointer-lazy-27f107517ff3a9ff.js"></script>
@@ -472,20 +472,25 @@
 <section id="native-fisheye-gallery" class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Generation from Fisheye Images</h2>
-    <p class="native-gallery-caption has-text-centered">Calibrated spatial memory
-      turns fisheye observations into perspective videos on
-      <a href="https://arxiv.org/abs/2602.18164">GrandTour</a>.</p>
+    <p class="native-gallery-caption has-text-centered">Unified spatial memory turns fisheye observations into perspective videos.</p>
     <div class="fisheye-browser">
       <div class="fisheye-inputs" role="group" aria-label="Choose a fisheye input">
         <h3>Fisheye inputs</h3>
-        <button class="fisheye-choice" type="button" data-fisheye-choice="grandtour-057f678032eb1714"
+        <div class="fisheye-datasets" role="group" aria-label="Dataset">
+          <button class="fisheye-dataset-choice" type="button" data-fisheye-dataset-choice="grandtour" aria-pressed="true">GrandTour</button>
+        </div>
+        <div class="fisheye-scene-viewport">
+          <div class="fisheye-scene-group" id="fisheye-scenes-grandtour">
+        <button class="fisheye-choice" type="button" aria-label="Show Village street" title="Village street" data-fisheye-choice="grandtour-057f678032eb1714"
         aria-pressed="true" aria-controls="fisheye-comparison-0">
         <img src="assets/native-fisheye/b6cec3d30127b3acf1a89a67d2aae3c659fc878b100e3c1cfd8b182a9e48509e.png" width="1920" height="1280" loading="lazy" alt="Fisheye input for Village street" decoding="async" fetchpriority="low">
         <span>Village street</span></button>
-        <button class="fisheye-choice" type="button" data-fisheye-choice="grandtour-194c5aa47ca0a89f"
+        <button class="fisheye-choice" type="button" aria-label="Show City plaza" title="City plaza" data-fisheye-choice="grandtour-194c5aa47ca0a89f"
         aria-pressed="false" aria-controls="fisheye-comparison-1">
         <img src="assets/native-fisheye/ab122db48853443aa69034ab23f7df3855078d4eca948e520ed65dc7a73035e5.png" width="1920" height="1280" loading="lazy" alt="Fisheye input for City plaza" decoding="async" fetchpriority="low">
         <span>City plaza</span></button>
+          </div>
+        </div>
       </div>
       <div class="fisheye-comparisons">
         <div id="fisheye-comparison-0" class="fisheye-comparison" data-gallery-page="native-0"
