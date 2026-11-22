@@ -44,7 +44,7 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css?v=af1e6edc875a">
   <link rel="stylesheet" href="static/css/academicons.min.css?v=d1ad1d52e508">
   <link rel="stylesheet" href="static/css/academic-template.css?v=d7034a9a374d">
-  <link rel="stylesheet" href="static/css/recallworld.css?v=a61d99c4432c843f">
+  <link rel="stylesheet" href="static/css/recallworld.css?v=76313ad34a7e0c25">
   
 
 
@@ -76,6 +76,7 @@
 
 
 <script defer src="js/revisit-magnifier-62b1228cf9ec3a49.js"></script>
+
 
 </head>
 <body>
@@ -151,7 +152,7 @@
 <section id="method" class="section" aria-labelledby="method-title"><div class="container is-max-desktop"><h2 id="method-title" class="title is-3 has-text-centered">Episodic Scenelet Memory</h2>
   <div class="content has-text-justified section-copy"><p><strong>A place should remain in memory after it leaves the frame.</strong>
   <span class="navworld-name">RecallWorld</span> turns completed video segments into 3D Scenelets,
-  retaining their geometry and appearance to guide generation when the camera returns.</p></div><figure class="method-figure"><img src="assets/paper-20261117/5dbce6530ab807c12eb9d30680132669ea979dadb023da4c98a6ee05ffff2f51.png" loading="lazy" width="1400" height="408" alt="RecallWorld: observation lifting, episodic Scenelet construction, querying and visibility-consistent conditioning." decoding="async" fetchpriority="low"><figcaption><p>Build local Scenelets, retrieve complementary views, and project their visible surfaces into the next camera poses.</p></figcaption></figure></div></section>
+  retaining their geometry and appearance to guide generation when the camera returns.</p></div><figure class="method-figure"><img src="assets/paper-20261117/5dbce6530ab807c12eb9d30680132669ea979dadb023da4c98a6ee05ffff2f51.png" loading="lazy" width="1400" height="408" alt="RecallWorld: observation lifting, episodic Scenelet construction, querying and visibility-consistent conditioning." decoding="async" fetchpriority="low"><figcaption><p><strong>Overview of RecallWorld.</strong> Ray lifting unifies perspective and native fisheye inputs in 3D; consolidation forms episodic Scenelet memory <math aria-label="M subscript k"><msub><mi mathvariant="script">M</mi><mi>k</mi></msub></math>. Complementary retrieval, target-view projection and visibility resolution form <math aria-label="bold C subscript k"><msub><mi mathvariant="bold">C</mi><mi>k</mi></msub></math>, which conditions <a href="https://arxiv.org/abs/2605.15178" target="_blank" rel="noopener noreferrer">SANA-WM</a> via a spatial-conditioning branch. Generated keyframes are jointly reconstructed into <math aria-label="S subscript k plus one"><msub><mi mathvariant="script">S</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></math> for continued memory-aware generation.</p></figcaption></figure></div></section>
 <section id="wide-field" class="section hero is-light" aria-labelledby="wide-field-title"><div class="container is-max-desktop"><h2 id="wide-field-title" class="title is-3 has-text-centered">Unified World Memory</h2><div class="content has-text-justified section-copy"><p><strong>Perspective and fisheye observations. One spatial memory.</strong>
     <span class="navworld-name">RecallWorld</span> retains observed geometry and appearance beyond the initial perspective field of view, so wider fisheye coverage can guide generation as those surfaces enter the camera's view.</p></div><div id="memory-carousel" class="memory-carousel" role="region"
   aria-roledescription="carousel" aria-label="Unified world memory figures" tabindex="0">

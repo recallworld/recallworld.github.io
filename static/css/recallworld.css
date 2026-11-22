@@ -2434,3 +2434,44 @@ html[data-theme="light"] .result-table tbody th, html[data-theme="light"] .resul
 html[data-theme="light"] .result-table .result-ours th  {
   color: #941f30;
 }
+
+/* 25. memory-controls-below-5cc99dfee5593665 */
+/* Keep figure navigation below the artwork and caption, in ordinary page flow. */
+#memory-carousel .memory-controls  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 14px 0 0;
+}
+
+#memory-carousel .memory-arrow.source-nav  {
+  position: static;
+  inset: auto;
+  transform: none;
+  width: 34px;
+  height: 34px;
+}
+
+#memory-carousel .memory-arrow svg  {
+  width: 16px;
+  height: 16px;
+}
+
+#memory-carousel .memory-dots  {
+  position: static;
+  inset: auto;
+  transform: none;
+  padding: 0;
+  background: none;
+  gap: 10px;
+}
+
+#memory-carousel .memory-dot  {
+  width: 10px;
+  height: 10px;
+}
+
+#method .method-figure math  {
+  font-size: 1em;
+}
