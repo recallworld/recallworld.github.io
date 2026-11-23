@@ -2830,3 +2830,16 @@ html[data-theme="light"] .result-table .result-ours th  {
   outline: 2px solid currentColor;
   outline-offset: 3px;
 }
+
+/* 28. fisheye-alignment-dd0ceaa00b818925 */
+/* Center the visible scene rail and comparison as one desktop block. */
+@media (min-width: 769px)  {
+  #native-fisheye-gallery .fisheye-browser  {
+    --fisheye-original-width: min(1100px, calc(100vw - 3rem));
+    grid-template-columns: var(--scene-rail-width) minmax(0, 1fr);
+    max-width: calc(min(1100px, 100%) - var(--scene-rail-width) - .75rem);
+  }
+  #native-fisheye-gallery .fisheye-dataset-choice  {
+    font-size: clamp(.7rem, calc(var(--fisheye-original-width) * .018 - .3rem), 1.18rem);
+  }
+}
