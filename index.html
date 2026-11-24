@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,18 @@
   <link rel="icon" href="assets/branding/7d95b4b7eeca6b10b93b727fc2efe78c0f24855e3d0653b398082732e8fe9335.png" type="image/png" sizes="128x128">
   <link rel="preload" href="static/webfonts/google-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="static/webfonts/noto-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<meta name="theme-color" content="#050505">
+<meta name="theme-color" content="#fafafa">
+  <script>
+    (() => {
+      let theme = "light";
+      try {
+        const saved = localStorage.getItem("navworld-theme");
+        if (saved === "light" || saved === "dark") theme = saved;
+      } catch (_) {}
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === "light" ? "#fafafa" : "#050505";
+    })();
+  </script>
   <meta name="description" content="RecallWorld generates persistent embodied video with episodic Scenelet memory, preserving scene identity across exploration and revisits.">
   <meta name="author" content="Sarosij Bose, Gitika Karumuri, Chenqi Li, Allen Tu, Srikumar Sastry, Mellon Zhang, Avinash Ravichandran, Alexander Schwing, Konstantinos Karydis, Amit K. Roy Chowdhury">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -61,7 +72,7 @@
 
 
 
-<script defer src="js/footer-navigation-e32300cb17fe73d2.js"></script>
+<script defer src="js/footer-navigation-50f2cf1b52bdd637.js"></script>
 
 
 
@@ -679,7 +690,7 @@
       <p class="template-credit">Website template: <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a>, adapted from <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">Nerfies</a>, under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-SA 4.0</a>.</p>
       <div class="colophon"><p>&copy; 2026 <a class="plain-link" href="https://www.amazon.science/" target="_blank" rel="noopener noreferrer">Amazon</a>
         <span aria-hidden="true">&middot;</span>
-        <button type="button" class="colophon-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false" title="Switch to light mode">
+        <button type="button" class="colophon-toggle" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="true" title="Switch to dark mode">
           <span class="theme-icon-wrap"><i class="fas fa-sun theme-icon theme-icon-sun" aria-hidden="true"></i><i class="fas fa-moon theme-icon theme-icon-moon" aria-hidden="true"></i></span>
         </button>
       </p></div>
