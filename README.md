@@ -40,4 +40,6 @@ Video world models generate plausible novel views but often lack persistent memo
 
 ## Acknowledgements
 
+RecallWorld builds on [SANA-WM](https://github.com/NVlabs/Sana), with [π³](https://github.com/yyfz/Pi3), [Depth Anything 3](https://github.com/ByteDance-Seed/Depth-Anything-3), and [UniK3D](https://github.com/lpiccinelli-eth/UniK3D) for geometry and range estimation. We thank their authors, and the authors of [GrandTour](https://grand-tour.leggedrobotics.com/), [M2DGR](https://github.com/SJTU-ViSYS/M2DGR), [TartanGround](https://tartanair.org/tartanground/), and [DL3DV](https://github.com/DL3DV-10K/Dataset) for their datasets.
+
 This work was completed during an internship at [Amazon](https://www.amazon.science/). We thank [Ziyang Long](https://ziyanglong.cn/), [Amin Kheradmand](https://scholar.google.com/citations?user=5DJL154AAAAJ), [David Stafford](https://www.linkedin.com/in/davidwstafford), [Yen-Liang Lin](https://sites.google.com/view/yenlianglin), [Shifan Zhu](https://shifanzhu.github.io/), [Yun He](https://yunhe20.github.io/), [Guy Satat](https://guysatat.com/), [Sravan Sripada](https://www.amazon.science/author/sravan-sripada), and [Prakriti Chintalapoodi](https://www.amazon.science/author/prakriti-chintalapoodi) for helpful discussions and feedback.
