@@ -13,6 +13,10 @@
 </p>
 
 <p align="center">
+  <a href="https://recallworld.github.io/">Website</a> · <a href="https://arxiv.org/abs/2611.28666">arXiv</a>
+</p>
+
+<p align="center">
   <img src="assets/readme/paper-teaser-d869532f42979f01.png" alt="Main-paper Figure 1: episodic Scenelet memory and faithful revisits" width="1000">
 </p>
 
@@ -22,7 +26,17 @@ Video world models generate plausible novel views but often lack persistent memo
 
 ## BibTeX
 
-The citation will be available with the arXiv release.
+```bibtex
+@misc{bose2026recallworldepisodicmemorypersistent,
+      title={RecallWorld: Episodic Memory for Persistent Embodied Video World Models},
+      author={Sarosij Bose and Gitika Karumuri and Chenqi Li and Allen Tu and Srikumar Sastry and Mellon Zhang and Avinash Ravichandran and Alexander Schwing and Konstantinos Karydis and Amit K. Roy Chowdhury},
+      year={2026},
+      eprint={2611.28666},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2611.28666},
+}
+```
 
 ## Acknowledgements
 
