@@ -2292,12 +2292,12 @@ html[data-theme="light"] .content strong, html[data-theme="light"] .hero.is-ligh
 }
 
 /* Circular display crops; the original native fisheye images stay unchanged. */
-#native-fisheye-gallery .fisheye-choice, #native-fisheye-gallery .fisheye-choice[aria-pressed="true"]  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice, :is(#native-fisheye-gallery, #gallery) .fisheye-choice[aria-pressed="true"]  {
   background: #000;
   color: #f8f9fc;
 }
 
-#native-fisheye-gallery .fisheye-choice img  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice img  {
   width: min(100%, 194px);
   height: auto;
   max-height: none;
@@ -2310,18 +2310,18 @@ html[data-theme="light"] .content strong, html[data-theme="light"] .hero.is-ligh
 }
 
 @media (max-width: 700px)  {
-  #native-fisheye-gallery .fisheye-choice img  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-choice img  {
     width: min(100%, 140px);
   }
 }
 
 /* 22. fisheye-datasets-c8c0f9d57b92f06d */
-#native-fisheye-gallery .fisheye-browser {
+:is(#native-fisheye-gallery, #gallery) .fisheye-browser {
   grid-template-columns:230px minmax(0,1fr);
   gap:24px
 }
 
-#native-fisheye-gallery .fisheye-inputs {
+:is(#native-fisheye-gallery, #gallery) .fisheye-inputs {
   display:flex;
   flex-direction:column;
   gap:12px
@@ -2364,40 +2364,40 @@ html[data-theme="light"] .content strong, html[data-theme="light"] .hero.is-ligh
   display:none!important
 }
 
-#native-fisheye-gallery .fisheye-choice {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice {
   padding:7px;
   border-radius:9px
 }
 
-#native-fisheye-gallery .fisheye-choice img {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice img {
   width:min(100%,96px)
 }
 
-#native-fisheye-gallery .fisheye-choice span {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice span {
   font-size:.8rem;
   line-height:1.25;
   margin-top:7px
 }
 
 @media(max-width:900px) {
-  #native-fisheye-gallery .fisheye-browser {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-browser {
     grid-template-columns:205px minmax(0,1fr);
     gap:18px
   }
 }
 
 @media(max-width:700px) {
-  #native-fisheye-gallery .fisheye-browser {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-browser {
     grid-template-columns:1fr;
     gap:18px
   }
-  #native-fisheye-gallery .fisheye-inputs {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-inputs {
     display:grid;
     grid-template-columns:90px minmax(0,1fr);
     align-items:start;
     gap:10px
   }
-  #native-fisheye-gallery .fisheye-inputs h3 {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-inputs h3 {
     grid-column:1/-1
   }
   .fisheye-datasets {
@@ -2411,10 +2411,10 @@ html[data-theme="light"] .content strong, html[data-theme="light"] .hero.is-ligh
     grid-column:2;
     grid-row:2
   }
-  #native-fisheye-gallery .fisheye-choice img {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-choice img {
     width:min(100%,84px)
   }
-  #native-fisheye-gallery .fisheye-choice span {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-choice span {
     font-size:.74rem
   }
 }
@@ -2531,7 +2531,7 @@ html[data-theme="light"] .result-table .result-ours th  {
 
 /* 26. gofish-selector-arrows-d5d8c00c1c4b9a8b */
 /* GoFish Results scene rail; enlarge only its thumbnail column. */
-#native-fisheye-gallery .fisheye-browser  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-browser  {
   --scene-rail-width: clamp(100px, 12cqw, 144px);
   container-type: inline-size;
   grid-template-columns: var(--scene-rail-width) minmax(0, 1fr) var(--scene-rail-width);
@@ -2540,7 +2540,7 @@ html[data-theme="light"] .result-table .result-ours th  {
   align-items: stretch;
 }
 
-#native-fisheye-gallery .fisheye-inputs  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-inputs  {
   grid-column: 1;
   grid-row: 1;
   display: flex;
@@ -2551,16 +2551,16 @@ html[data-theme="light"] .result-table .result-ours th  {
   min-height: 0;
 }
 
-#native-fisheye-gallery .fisheye-inputs h3  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-inputs h3  {
   display: none;
 }
 
-#native-fisheye-gallery .fisheye-datasets  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-datasets  {
   display: grid;
   gap: .25rem;
 }
 
-#native-fisheye-gallery .fisheye-dataset-choice  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-dataset-choice  {
   width: 100%;
   min-width: 0;
   padding: .28rem .12rem;
@@ -2578,18 +2578,18 @@ html[data-theme="light"] .result-table .result-ours th  {
   transition: color .18s ease, background-color .18s ease, border-color .18s ease;
 }
 
-#native-fisheye-gallery .fisheye-dataset-choice[aria-pressed="true"]  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-dataset-choice[aria-pressed="true"]  {
   border-color: var(--ink);
   color: var(--panel-background);
   background: var(--ink);
 }
 
-#native-fisheye-gallery .fisheye-dataset-choice:focus-visible  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-dataset-choice:focus-visible  {
   outline: 2px solid #dc8696;
   outline-offset: 2px;
 }
 
-#native-fisheye-gallery .fisheye-scene-viewport  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-scene-viewport  {
   position: relative;
   flex: 1 1 auto;
   width: 100%;
@@ -2599,7 +2599,7 @@ html[data-theme="light"] .result-table .result-ours th  {
   overflow: hidden;
 }
 
-#native-fisheye-gallery .fisheye-scene-group  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-scene-group  {
   position: absolute;
   inset: 0;
   display: flex;
@@ -2616,7 +2616,7 @@ html[data-theme="light"] .result-table .result-ours th  {
   scrollbar-width: thin;
 }
 
-#native-fisheye-gallery .fisheye-choice  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice  {
   display: block;
   flex: 0 0 auto;
   height: auto;
@@ -2634,7 +2634,7 @@ html[data-theme="light"] .result-table .result-ours th  {
   transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
 }
 
-#native-fisheye-gallery .fisheye-choice img  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice img  {
   display: block;
   width: 100%;
   height: 100%;
@@ -2645,67 +2645,67 @@ html[data-theme="light"] .result-table .result-ours th  {
   background: #000;
 }
 
-#native-fisheye-gallery .fisheye-choice span  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice span  {
   display: none;
 }
 
-#native-fisheye-gallery .fisheye-choice:hover  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice:hover  {
   border-color: var(--border);
   transform: translateY(-1px);
 }
 
-#native-fisheye-gallery .fisheye-choice[aria-pressed="true"]  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice[aria-pressed="true"]  {
   border-color: #dc8696;
   background: #000;
   box-shadow: 0 3px 12px #0003;
 }
 
-#native-fisheye-gallery .fisheye-comparisons  {
+:is(#native-fisheye-gallery, #gallery) .fisheye-comparisons  {
   grid-column: 2;
   grid-row: 1;
 }
 
 @media (max-width: 768px)  {
-  #native-fisheye-gallery .fisheye-browser  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-browser  {
     --scene-rail-width: clamp(64px, 20vw, 86px);
     grid-template-columns: var(--scene-rail-width) minmax(0, 1fr);
     gap: .5rem;
   }
-  #native-fisheye-gallery .fisheye-inputs  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-inputs  {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(0, 1fr);
   }
-  #native-fisheye-gallery .fisheye-datasets  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-datasets  {
     grid-column: 1;
     grid-row: 1;
   }
-  #native-fisheye-gallery .fisheye-scene-viewport  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-scene-viewport  {
     grid-column: 1;
     grid-row: 2;
     min-height: 160px;
   }
-  #native-fisheye-gallery .fisheye-scene-group  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-scene-group  {
     grid-column: auto;
     grid-row: auto;
     gap: .28rem;
     padding-right: 1px;
   }
-  #native-fisheye-gallery .fisheye-dataset-choice  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-dataset-choice  {
     padding: .36rem .25rem;
     font-size: clamp(.7rem, 3.2cqw, .82rem);
     font-weight: 600;
     letter-spacing: -.025em;
   }
-  #native-fisheye-gallery .fisheye-choice  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-choice  {
     border-radius: .45rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce)  {
-  #native-fisheye-gallery .fisheye-choice, #native-fisheye-gallery .fisheye-dataset-choice  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-choice, :is(#native-fisheye-gallery, #gallery) .fisheye-dataset-choice  {
     transition: none;
   }
-  #native-fisheye-gallery .fisheye-choice:hover  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-choice:hover  {
     transform: none;
   }
 }
@@ -2823,12 +2823,12 @@ html[data-theme="light"] .result-table .result-ours th  {
 /* 28. fisheye-alignment-dd0ceaa00b818925 */
 /* Center the visible scene rail and comparison as one desktop block. */
 @media (min-width: 769px)  {
-  #native-fisheye-gallery .fisheye-browser  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-browser  {
     --fisheye-original-width: min(1100px, calc(100vw - 3rem));
     grid-template-columns: var(--scene-rail-width) minmax(0, 1fr);
     max-width: calc(min(1100px, 100%) - var(--scene-rail-width) - .75rem);
   }
-  #native-fisheye-gallery .fisheye-dataset-choice  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-dataset-choice  {
     font-size: clamp(.7rem, calc(var(--fisheye-original-width) * .018 - .3rem), 1.18rem);
   }
 }
@@ -3324,16 +3324,33 @@ html[data-theme="dark"]  { --arrow: #e2e4e9; --bg-chip: #1e1e1e; --text-heading:
 }
 
 /* Per-thumbnail dataset and FoV pill (single merged fisheye list). */
-#native-fisheye-gallery .fisheye-choice  { position: relative; }
-#native-fisheye-gallery .fisheye-choice .fisheye-fov-pill  { position: absolute; left: 6px; bottom: 6px; display: block; padding: .18em .5em; border-radius: 5px; background: rgba(0, 0, 0, .6); color: #fff; font: 600 .85rem / 1.2 "Google Sans", "Noto Sans", sans-serif; white-space: nowrap; pointer-events: none; }
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice  { position: relative; }
+:is(#native-fisheye-gallery, #gallery) .fisheye-choice .fisheye-fov-pill  { position: absolute; left: 6px; bottom: 6px; display: block; padding: .18em .5em; border-radius: 5px; background: rgba(0, 0, 0, .6); color: #fff; font: 600 .85rem / 1.2 "Google Sans", "Noto Sans", sans-serif; white-space: nowrap; pointer-events: none; }
 @media (max-width: 768px)  {
-  #native-fisheye-gallery .fisheye-scene-viewport  { grid-row: 1 / -1; }
-  #native-fisheye-gallery .fisheye-choice .fisheye-fov-pill  { left: 3px; bottom: 3px; padding: .12em .35em; font-size: .7rem; }
+  :is(#native-fisheye-gallery, #gallery) .fisheye-scene-viewport  { grid-row: 1 / -1; }
+  :is(#native-fisheye-gallery, #gallery) .fisheye-choice .fisheye-fov-pill  { left: 3px; bottom: 3px; padding: .12em .35em; font-size: .7rem; }
 }
 /* Non-interactive heading pill above the scene list (same look as the stage pills). */
-#native-fisheye-gallery .fisheye-inputs-pill  { flex: 0 0 auto; align-self: stretch; box-sizing: border-box; padding: .25em .4em; border: 1.5px solid var(--text-heading); border-radius: 6px; background: #fff; color: var(--text-heading); text-align: center; font: 600 clamp(11px, 1.05vw, 14px) / 1.15 "Google Sans", "Noto Sans", sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+:is(#native-fisheye-gallery, #gallery) .fisheye-inputs-pill  { flex: 0 0 auto; align-self: stretch; box-sizing: border-box; padding: .25em .4em; border: 1.5px solid var(--text-heading); border-radius: 6px; background: #fff; color: var(--text-heading); text-align: center; font: 600 clamp(11px, 1.05vw, 14px) / 1.15 "Google Sans", "Noto Sans", sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @media (max-width: 768px)  {
-  #native-fisheye-gallery .fisheye-inputs-pill  { grid-column: 1; grid-row: 1; padding: .2em .3em; font-size: clamp(9px, 2.6vw, 12px); white-space: normal; line-height: 1.1; }
-  #native-fisheye-gallery .fisheye-scene-viewport  { grid-row: 2; }
+  :is(#native-fisheye-gallery, #gallery) .fisheye-inputs-pill  { grid-column: 1; grid-row: 1; padding: .2em .3em; font-size: clamp(9px, 2.6vw, 12px); white-space: normal; line-height: 1.1; }
+  :is(#native-fisheye-gallery, #gallery) .fisheye-scene-viewport  { grid-row: 2; }
 }
-html[data-theme="dark"] #native-fisheye-gallery .fisheye-inputs-pill  { background: var(--bg-chip); }
+html[data-theme="dark"] :is(#native-fisheye-gallery, #gallery) .fisheye-inputs-pill  { background: var(--bg-chip); }
+
+/* Explore the Worlds: same rail + three-way stage as the fisheye section, with
+   rectangular Starting Image thumbnails and baseline buttons under the stage. */
+#gallery .fisheye-choice  { aspect-ratio: 640 / 352; border-radius: .5rem; }
+#gallery .fisheye-choice img  { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; border-radius: 0; margin: 0; }
+#gallery .explore-baselines  { grid-column: 2; grid-row: 2; display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-top: 1.1rem; }
+#gallery .explore-baseline[hidden]  { display: none; }
+#gallery .explore-baseline[aria-pressed="true"]  { background: #941f30; color: #fff; border-color: #c66a7d; }
+@media (max-width: 768px)  {
+  #gallery .fisheye-choice  { border-radius: .35rem; }
+  #gallery .explore-baselines  { gap: .35rem; margin-top: .8rem; }
+  #gallery .explore-baseline  { padding: .32rem .7rem; font-size: .85rem; }
+}
+/* Main results: the explorer spans the teaser's width (rail + stage, no spacer). */
+#gallery .explore-browser  { grid-template-columns: var(--scene-rail-width) minmax(0, 1fr); max-width: min(1100px, 100%); }
+/* The explorer's source videos are decode-only; the canvas shows them. */
+#gallery .explore-stage video  { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
