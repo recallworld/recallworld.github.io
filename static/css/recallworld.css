@@ -3183,3 +3183,9 @@ html[data-theme="dark"] .footer .icon-link:hover, html[data-theme="dark"] .foote
   #headline-comparison .quad-label-tl, #headline-comparison .quad-label-bl  { left: 6px; }
   #headline-comparison .quad-label-tr, #headline-comparison .quad-label-br  { right: 6px; }
 }
+
+/* Theme switch fade: only while .theme-anim is on <html> (added by the toggle). */
+html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *::after  {
+  transition: background-color .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease, fill .35s ease !important;
+}
+html.theme-anim .theme-icon  { transition: transform .6s ease, opacity .6s ease !important; }

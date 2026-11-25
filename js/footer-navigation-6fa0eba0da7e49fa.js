@@ -12,6 +12,12 @@
   }
   setTheme(root.dataset.theme === "dark" ? "dark" : "light");
   button.addEventListener("click", () => {
+    // Ease the colour swap (as on GOFish); removed afterwards so normal hovers keep their own timing.
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      root.classList.add("theme-anim");
+      clearTimeout(button._themeTimer);
+      button._themeTimer = setTimeout(() => root.classList.remove("theme-anim"), 450);
+    }
     const theme = root.dataset.theme === "light" ? "dark" : "light";
     setTheme(theme);
     try { localStorage.setItem("navworld-theme", theme); } catch (_) {}
