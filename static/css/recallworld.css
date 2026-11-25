@@ -3360,3 +3360,17 @@ html[data-theme="dark"] :is(#native-fisheye-gallery, #gallery) .fisheye-inputs-p
 /* Explorer pills scale with its stage: 944/1100 of the teaser's pill size. */
 #gallery .tri-label  { font-size: clamp(12px, 1.55vw, 20.5px); }
 @media (max-width: 600px)  { #gallery .tri-label  { font-size: clamp(11px, 3.1vw, 12.5px); } }
+/* Phones: slimmer scene rail whose height ends with the comparison stage. */
+@media (max-width: 768px)  {
+  :is(#native-fisheye-gallery, #gallery) .fisheye-browser  { --scene-rail-width: clamp(48px, 14vw, 66px); gap: .4rem; }
+  :is(#native-fisheye-gallery, #gallery) .fisheye-scene-viewport  { min-height: 0; }
+  :is(#native-fisheye-gallery, #gallery) .fisheye-inputs  { align-self: stretch; min-height: 0; overflow: hidden; }
+  :is(#native-fisheye-gallery, #gallery) .fisheye-inputs-pill  { font-size: clamp(8px, 2.2vw, 10px); padding: .2em .15em; }
+}
+/* Scene-rail scroll fades (classes set by js/rail-fade-*.js). */
+.fisheye-scene-group  { --fade-top: 0px; --fade-bottom: 0px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top), #000 calc(100% - var(--fade-bottom)), transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0, #000 var(--fade-top), #000 calc(100% - var(--fade-bottom)), transparent 100%); }
+.fisheye-scene-group.fade-top  { --fade-top: 28px; }
+.fisheye-scene-group.fade-bottom  { --fade-bottom: 44px; }
+@media (max-width: 768px)  { .fisheye-scene-group.fade-top { --fade-top: 16px; } .fisheye-scene-group.fade-bottom { --fade-bottom: 26px; } }
