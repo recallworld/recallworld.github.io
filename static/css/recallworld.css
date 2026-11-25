@@ -3236,3 +3236,24 @@ html[data-theme="dark"] .footer .colophon, html[data-theme="dark"] .footer .colo
 }
 @media (hover: none)  { .footer .content p a:not(.icon-link):hover  { background-size: 0% 1.5px; } }
 @media (prefers-reduced-motion: reduce)  { .footer .content p a:not(.icon-link)  { transition: none; } }
+
+/* Body links get the same GOFish sliding underline: prose, captions, authors and
+   affiliations. Buttons, icon links and the result tables' method links keep theirs. */
+main :is(p, li, figcaption, .publication-authors, .publication-affiliations) a:not(.button):not(.icon-link):not(.result-baseline-link)  {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size .3s ease, color .2s ease;
+}
+main :is(p, li, figcaption, .publication-authors, .publication-affiliations) a:not(.button):not(.icon-link):not(.result-baseline-link):is(:hover, :focus-visible)  {
+  background-size: 100% 1.5px;
+  text-decoration: none;
+}
+@media (hover: none)  {
+  main :is(p, li, figcaption, .publication-authors, .publication-affiliations) a:not(.button):not(.icon-link):not(.result-baseline-link):hover  { background-size: 0% 1.5px; }
+}
+@media (prefers-reduced-motion: reduce)  {
+  main :is(p, li, figcaption, .publication-authors, .publication-affiliations) a:not(.button):not(.icon-link)  { transition: none; }
+}
