@@ -3257,3 +3257,6 @@ main :is(p, li, figcaption, .publication-authors, .publication-affiliations) a:n
 @media (prefers-reduced-motion: reduce)  {
   main :is(p, li, figcaption, .publication-authors, .publication-affiliations) a:not(.button):not(.icon-link)  { transition: none; }
 }
+/* Like GOFish, hovering draws the underline without also changing the link colour. */
+main :is(p, li, figcaption, .publication-authors) a:not(.button):not(.icon-link):not(.result-baseline-link):hover,
+.footer .content p a:not(.icon-link):hover  { color: var(--link-color); }
