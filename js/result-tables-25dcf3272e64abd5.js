@@ -7,9 +7,6 @@
   const tabs = [...root.querySelectorAll(".result-tab")];
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   let active = 0;
-  // Hold the viewport at the tallest table so switching tabs never moves the page
-  // below; every table card stretches to that shared height.
-  const tallest = () => Math.max(...slides.map(slide => slide.scrollHeight));
   let scheduled = false;
   const offsets = () => slides.map(n =>
     n.getBoundingClientRect().left - viewport.getBoundingClientRect().left + viewport.scrollLeft);
@@ -24,7 +21,7 @@
       slide.inert = i !== index;
       slide.setAttribute("aria-hidden", String(i !== index));
     });
-    viewport.style.height = tallest() + "px";
+    viewport.style.height = slides[index].offsetHeight + "px";
   }
 
   function select(index, focus = false) {
@@ -61,7 +58,7 @@
   }, {passive: true});
   let previousWidth = 0;
   const resize = new ResizeObserver(() => {
-    viewport.style.height = tallest() + "px";
+    viewport.style.height = slides[active].offsetHeight + "px";
     if (viewport.clientWidth !== previousWidth) {
       previousWidth = viewport.clientWidth;
       viewport.scrollLeft = offsets()[active];

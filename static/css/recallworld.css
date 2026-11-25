@@ -3148,7 +3148,10 @@ html[data-theme="dark"] #theme-toggle:hover .theme-icon-moon  { transform: trans
 .footer .icon-link:hover, .footer .icon-link:focus-visible  { color: #941f30; }
 html[data-theme="dark"] .footer .icon-link:hover, html[data-theme="dark"] .footer .icon-link:focus-visible  { color: var(--brand-text); }
 .footer .content a:not(.icon-link):not(.plain-link):not([aria-label="Website source code"])  { color: var(--link-color); }
-#results-carousel .result-slide  { align-self: stretch; }
+/* The table frame follows each table's own height; easing the change softens the
+   reflow of the page below when switching tabs. */
+#results-carousel .results-viewport  { transition: height .35s cubic-bezier(.4, 0, .2, 1); }
+@media (prefers-reduced-motion: reduce)  { #results-carousel .results-viewport  { transition: none; } }
 
 /* Explore the Worlds: the incoming gallery page slides in from the side it came from. */
 @keyframes worlds-in-next  { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
