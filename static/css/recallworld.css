@@ -3351,19 +3351,10 @@ html[data-theme="dark"] :is(#native-fisheye-gallery, #gallery) .fisheye-inputs-p
   #gallery .explore-baseline  { padding: .32rem .7rem; font-size: .85rem; }
 }
 /* Main results: the explorer spans the teaser's width (rail + stage, no spacer). */
-@media (min-width: 769px)  {
-  /* Stage centred on the page with the rail to its left (an empty rail-width column
-     balances it on the right); the block may run past the text column so the stage
-     can reach the teaser's 1100 px on wide screens. */
-  #gallery .explore-browser  {
-    --explore-width: min(calc(1100px + 2 * (var(--scene-rail-width) + .75rem)), calc(100vw - 3rem));
-    grid-template-columns: var(--scene-rail-width) minmax(0, 1fr) var(--scene-rail-width);
-    width: var(--explore-width);
-    max-width: none;
-    margin-left: calc((100% - var(--explore-width)) / 2);
-    margin-right: calc((100% - var(--explore-width)) / 2);
-  }
-}
+/* Scene rail + stage centred together as one block spanning the teaser's width
+   (same alignment as the fisheye section). */
+#gallery .explore-browser  { grid-template-columns: var(--scene-rail-width) minmax(0, 1fr); max-width: min(1100px, 100%); }
+
 /* The explorer's source videos are decode-only; the canvas shows them. */
 #gallery .explore-stage video  { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 /* Explorer pills scale with its stage: 944/1100 of the teaser's pill size. */
