@@ -34,7 +34,7 @@ Video world models generate plausible novel views but often lack persistent memo
       eprint={2611.28666},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2611.28666},
+      url={https://arxiv.org/abs/2611.28666}
 }
 ```
 

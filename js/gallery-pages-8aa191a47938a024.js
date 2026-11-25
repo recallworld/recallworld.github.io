@@ -15,7 +15,7 @@
       page.hidden = i !== selected;
       page.setAttribute("aria-hidden", String(i !== selected));
     });
-    dots.forEach((dot, i) => dot.setAttribute("aria-pressed", String(i === selected)));
+    dots.forEach((dot, i) => { dot.setAttribute("aria-pressed", String(i === selected)); dot.classList.toggle("is-active", i === selected); });
     root.dataset.gallerySet = String(selected);
     root.dispatchEvent(new CustomEvent("gallerypagechange", {bubbles: true}));
   }

@@ -3147,7 +3147,6 @@ html[data-theme="dark"] #theme-toggle:hover .theme-icon-moon  { transform: trans
 .footer, .footer p, .footer .template-credit, .footer .colophon, .footer .colophon .plain-link  { color: var(--ink); }
 .footer .icon-link:hover, .footer .icon-link:focus-visible  { color: #941f30; }
 html[data-theme="dark"] .footer .icon-link:hover, html[data-theme="dark"] .footer .icon-link:focus-visible  { color: var(--brand-text); }
-.footer .content a:not(.icon-link):not(.plain-link):not([aria-label="Website source code"])  { color: var(--link-color); }
 /* The table frame follows each table's own height; easing the change softens the
    reflow of the page below when switching tabs. */
 #results-carousel .results-viewport  { transition: height .35s cubic-bezier(.4, 0, .2, 1); }
@@ -3264,3 +3263,25 @@ main :is(p, li, figcaption, .publication-authors) a:not(.button):not(.icon-link)
    the sliding underline marks them on hover. */
 .footer .content p a:not(.icon-link), .footer .content p a:not(.icon-link):hover  { color: #000; }
 html[data-theme="dark"] .footer .content p a:not(.icon-link), html[data-theme="dark"] .footer .content p a:not(.icon-link):hover  { color: #f8f9fc; }
+
+
+/* Tokens for the GOFish slideshow component (static/css/slideshow.css), shared by
+   Unified World Memory and the Explore the Worlds page controls. The current-slide
+   dot is black (white in dark mode). */
+:root  { --arrow: #363636; --bg-chip: #f0f0f0; --text-heading: #000; --dot: #8f8f8f; --dot-hover: #6b6b6b;
+         --dot-active: #000; --link: var(--link-color); --shadow: rgba(0,0,0,.14); --shadow-raised: rgba(0,0,0,.2); }
+html[data-theme="dark"]  { --arrow: #e2e4e9; --bg-chip: #1e1e1e; --text-heading: #fff; --dot: #6b6b6b; --dot-hover: #8f8f8f;
+         --dot-active: #fff; --shadow: rgba(0,0,0,.5); --shadow-raised: rgba(0,0,0,.6); }
+.slideshow-rw  { --slideshow-peek: 1; margin-top: 1.25rem; }
+.slideshow-rw .slideshow-slide > img  { background: #fff; aspect-ratio: auto; }
+.slideshow-rw .slide-caption  { margin: .9rem 0 0; color: var(--ink); line-height: 1.6; text-align: left; }
+#gallery .worlds-navigation.slideshow-controls  { position: static; margin-top: 10px; background: none; }
+#gallery .worlds-page-dots  { display: contents; }
+#memory-carousel  { max-width: 820px; margin-left: auto; margin-right: auto; }
+/* Explore the Worlds controls: a centred flex row (the old rule made the wrapper
+   display:contents), with the slideshow dot colours rather than the old white one. */
+#gallery .worlds-navigation.slideshow-controls  { display: flex; justify-content: center; align-items: center; gap: 7px; width: 100%; }
+#gallery .worlds-page-dot.slideshow-dot  { width: 8px; height: 8px; border: 0; background: var(--dot); }
+#gallery .worlds-page-dot.slideshow-dot:hover  { background: var(--dot-hover); }
+#gallery .worlds-page-dot.slideshow-dot.is-active, #gallery .worlds-page-dot.slideshow-dot[aria-pressed="true"]  { background: var(--dot-active); transform: scale(1.25); }
+#gallery .worlds-carousel  { padding-bottom: 0; }

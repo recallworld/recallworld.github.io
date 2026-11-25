@@ -62,7 +62,8 @@
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css?v=af1e6edc875a">
   <link rel="stylesheet" href="static/css/academicons.min.css?v=d1ad1d52e508">
   <link rel="stylesheet" href="static/css/academic-template.css?v=d7034a9a374d">
-  <link rel="stylesheet" href="static/css/recallworld.css?v=4bd3e396fa391d0d">
+  <link rel="stylesheet" href="static/css/slideshow.css?v=6724371e607350a8">
+  <link rel="stylesheet" href="static/css/recallworld.css?v=736f255d109640d4">
   
 
 
@@ -70,7 +71,7 @@
 
 
 <script defer src="js/gallery-viewport-8ec266c8dc2827fa.js"></script>
-<script defer src="js/gallery-pages-6407648f5f20ebcb.js"></script>
+<script defer src="js/gallery-pages-8aa191a47938a024.js"></script>
 
 <script defer src="js/result-tables-25dcf3272e64abd5.js"></script>
 
@@ -82,7 +83,6 @@
 
 
 
-<script defer src="js/memory-carousel-b6a70d207c92c316.js"></script>
 
 
 <script defer src="js/quad-pointer-lazy-0e5392340d409cb2.js"></script>
@@ -100,6 +100,7 @@
 
 
 
+<script defer src="js/slideshow-b79d95b2ee8e6261.js"></script>
 <script defer src="js/bibtex-4493265da142e5c1.js"></script>
 </head>
 <body>
@@ -168,36 +169,14 @@
   <span class="navworld-name">RecallWorld</span> turns completed video segments into 3D Scenelets,
   retaining their geometry and appearance to guide generation when the camera returns.</p></div><figure class="method-figure"><img src="assets/paper-20261117/54310f0135ab94b04d42776275c1764318c08861cff9d4133c69e92b433a7698.webp" loading="lazy" width="1400" height="408" alt="RecallWorld: observation lifting, episodic Scenelet construction, querying and visibility-consistent conditioning." decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='assets/paper-20261117/5dbce6530ab807c12eb9d30680132669ea979dadb023da4c98a6ee05ffff2f51.png';"><figcaption><p><strong>Overview of RecallWorld.</strong> Ray lifting unifies perspective and native fisheye inputs in 3D; consolidation forms episodic Scenelet memory <math aria-label="M subscript k"><msub><mi mathvariant="script">M</mi><mi>k</mi></msub></math>. Complementary retrieval, target-view projection and visibility resolution form <math aria-label="bold C subscript k"><msub><mi mathvariant="bold">C</mi><mi>k</mi></msub></math>, which conditions <a href="https://arxiv.org/abs/2605.15178" target="_blank" rel="noopener noreferrer">SANA-WM</a> via a spatial-conditioning branch. Generated keyframes are jointly reconstructed into <math aria-label="S subscript k plus one"><msub><mi mathvariant="script">S</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub></math> for continued memory-aware generation.</p></figcaption></figure></div></section>
 <section id="wide-field" class="section hero is-light" aria-labelledby="wide-field-title"><div class="container is-max-desktop"><h2 id="wide-field-title" class="title is-3 has-text-centered">Unified World Memory</h2><div class="content has-text-justified section-copy"><p><strong>Perspective and fisheye observations. One spatial memory.</strong>
-    <span class="navworld-name">RecallWorld</span> retains observed geometry and appearance beyond the initial perspective field of view, so wider fisheye coverage can guide generation as those surfaces enter the camera's view.</p></div><div id="memory-carousel" class="memory-carousel" role="region"
-  aria-roledescription="carousel" aria-label="Unified world memory figures" tabindex="0">
-  <div class="memory-viewport"><figure id="memory-slide-0" class="wide-field-figure memory-slide"><div class="memory-artwork"><img src="assets/paper-20261117/4dc00e2257ba2c6e8426e698b71ce7131262dedc9ba049f6d4c9fb166785bd62.webp" loading="lazy" width="1400" height="920" alt="Camera-aware memory: native fisheye input, calibrated camera path, SANA-WM and RecallWorld revisit generations." decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='assets/paper-20261117/12a00e741d631049c92920d29fda101b0bcdb45a186fb78859b1ce38607292d5.png';"></div><figcaption><p><strong>Remember what the initial perspective image misses.</strong> On <a href="https://arxiv.org/abs/2602.18164" target="_blank" rel="noopener noreferrer">GrandTour</a>, <span class="navworld-name">RecallWorld-PF</span> retains the outlined façade from the wider fisheye observation; <span class="navworld-name">RecallWorld</span> uses only its perspective portion.</p></figcaption></figure><figure id="memory-slide-1" class="wide-field-figure memory-slide" aria-hidden="true" inert>
-  <div class="memory-artwork"><img src="assets/unified-memory/0155b188930f03cf11224f602198f8e3487772a312d4d543e463c540df1b0c2a.webp"
+    <span class="navworld-name">RecallWorld</span> retains observed geometry and appearance beyond the initial perspective field of view, so wider fisheye coverage can guide generation as those surfaces enter the camera's view.</p></div><div id="memory-carousel" class="slideshow slideshow-rw" tabindex="0" aria-label="Unified world memory figures"><div class="slideshow-viewport"><div class="slideshow-track"><div class="slideshow-slide"><img src="assets/paper-20261117/4dc00e2257ba2c6e8426e698b71ce7131262dedc9ba049f6d4c9fb166785bd62.webp" loading="lazy" width="1400" height="920" alt="Camera-aware memory: native fisheye input, calibrated camera path, SANA-WM and RecallWorld revisit generations." decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='assets/paper-20261117/12a00e741d631049c92920d29fda101b0bcdb45a186fb78859b1ce38607292d5.png';"><p class="slide-caption"><strong>Remember what the initial perspective image misses.</strong> On <a href="https://arxiv.org/abs/2602.18164" target="_blank" rel="noopener noreferrer">GrandTour</a>, <span class="navworld-name">RecallWorld-PF</span> retains the outlined façade from the wider fisheye observation; <span class="navworld-name">RecallWorld</span> uses only its perspective portion.</p></div><div class="slideshow-slide"><img src="assets/unified-memory/0155b188930f03cf11224f602198f8e3487772a312d4d543e463c540df1b0c2a.webp"
     loading="lazy" width="800" height="512"
-    alt="Figure S3: a pixel outside the dashed perspective crop follows its viewing ray to the corresponding 3D point in a Scenelet." decoding="async" fetchpriority="low"></div>
-  <figcaption><p><strong>Wider observations become lasting memory.</strong>
+    alt="Figure S3: a pixel outside the dashed perspective crop follows its viewing ray to the corresponding 3D point in a Scenelet." decoding="async" fetchpriority="low"><p class="slide-caption"><strong>Wider observations become lasting memory.</strong>
     Camera-aware ray lifting maps a pixel outside the perspective crop into a Scenelet.
-    The dashed boundary marks the extra scene coverage retained from the fisheye image.</p></figcaption>
-</figure></div>
-  <div class="memory-controls">
-    <button type="button" class="memory-arrow source-nav" data-memory-previous aria-label="Previous memory figure"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    <div class="memory-dots" aria-label="Choose a memory figure">
-      <button type="button" class="memory-dot" data-memory-slide="0" aria-label="Perspective and fisheye memory" aria-controls="memory-slide-0" aria-pressed="true"></button>
-      <button type="button" class="memory-dot" data-memory-slide="1" aria-label="Camera-aware ray lifting, Figure S3" aria-controls="memory-slide-1" aria-pressed="false"></button>
-    </div>
-    <button type="button" class="memory-arrow source-nav" data-memory-next aria-label="Next memory figure"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-  </div>
-</div></div></section>
+    The dashed boundary marks the extra scene coverage retained from the fisheye image.</p></div></div></div><div class="slideshow-controls"><button type="button" class="slideshow-prev" aria-label="Previous figure"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="slideshow-next" aria-label="Next figure"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button></div><div class="slideshow-status" aria-live="polite"></div></div></div></section>
 <section id="visibility" class="section" aria-labelledby="visibility-title"><div class="container is-max-desktop"><h2 id="visibility-title" class="title is-3 has-text-centered">Visibility-Guided Generation</h2><div class="content has-text-justified section-copy"><p><strong>Memory must respect what the camera can see.</strong>
     <span class="navworld-name">RecallWorld</span> resolves depth conflicts before fusing appearance, preventing farther projections from replacing an occluding front surface.</p></div><figure class="method-figure"><img src="assets/paper-20261117/2233cb02bb1549d32cb3d8c7292e93b8f0b8b09af83067061cb46ff9ba19bce2.webp" loading="lazy" width="1400" height="1058" alt="Overlapping Scenelets, front-most Scenelet map, generation without visibility, visibility-resolved generation and ground truth." decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='assets/paper-20261117/78c610833f1fbbc49c1c2ca66119f60ec3b0cb1e2a7e414b4338fcf5174df27d.png';"><figcaption><p><strong>Front surfaces stay in front.</strong> Our visibility guidance resolves conflicting projections before combining appearance. This <a href="https://arxiv.org/abs/2602.18164" target="_blank" rel="noopener noreferrer">GrandTour</a> example shows the resulting spatial condition.</p></figcaption></figure></div></section>
-<section id="gallery" class="section hero is-light" aria-labelledby="gallery-title"><div class="container is-max-desktop"><h2 id="gallery-title" class="title is-3 has-text-centered">Explore the Worlds</h2><p class="has-text-centered mb-5">Compare RecallWorld and other methods at <strong style="color:inherit">partial and full</strong> revisits with Ground Truth.</p><div class="worlds-carousel"><div class="worlds-navigation" aria-label="Choose a gallery set">
-      <button type="button" class="worlds-page-arrow source-nav" data-gallery-previous aria-label="Previous gallery set"></button>
-      <div class="worlds-page-dots">
-        <button type="button" class="worlds-page-dot" data-gallery-dot="0" aria-pressed="true" aria-label="Gallery set 1"></button>
-        <button type="button" class="worlds-page-dot" data-gallery-dot="1" aria-pressed="false" aria-label="Gallery set 2"></button>
-        <button type="button" class="worlds-page-dot" data-gallery-dot="2" aria-pressed="false" aria-label="Gallery set 3"></button>
-      </div>
-      <button type="button" class="worlds-page-arrow source-nav" data-gallery-next aria-label="Next gallery set"></button>
-    </div><div class="worlds-pages"><div class="worlds-gallery" data-gallery-page="0" aria-label="Gallery set 1" aria-hidden="false"><article class="world-card" data-case="tg-96701d590f13-cycle32-20261104">
+<section id="gallery" class="section hero is-light" aria-labelledby="gallery-title"><div class="container is-max-desktop"><h2 id="gallery-title" class="title is-3 has-text-centered">Explore the Worlds</h2><p class="has-text-centered mb-5">Compare RecallWorld and other methods at <strong style="color:inherit">partial and full</strong> revisits with Ground Truth.</p><div class="worlds-carousel"><div class="worlds-pages"><div class="worlds-gallery" data-gallery-page="0" aria-label="Gallery set 1" aria-hidden="false"><article class="world-card" data-case="tg-96701d590f13-cycle32-20261104">
       <h3>Lantern Street</h3>
       <div class="world-toolbar"><select class="world-method-left" aria-label="Left method for Lantern Street"><option value="navworld" data-video="assets/website-polish/73a8cd6fef9daef8e2147d3defd2c65cb54f4d51d9485a5fb9d782b76a2a5185.mp4" data-poster="assets/website-polish/e0245a1c74729bf90edb6f4b2dec5e339ade1e5d3a51090dc6b6a25d68095031.webp">RecallWorld</option><option value="sana" data-video="assets/website-polish/02af63edf8883009e524894ddcf94d72babeae79004226755ca5acd53fca9bd0.mp4" data-poster="assets/website-polish/ef6a655bd0b82986cd8893ca2a7be13ba0b452762bcd03d96bbd3c10dd2131dd.webp">SANA-WM</option><option value="gen3c" data-video="assets/website-polish/8bb2f597d2294acbbdf7e7fc6103bce141733e5398cc7acd582065ec07ac7bc9.mp4" data-poster="assets/website-polish/3a0597c05c64e8fb6eadae60834bee5d0f37529a033582814db65c6016c7572b.webp">GEN3C</option><option value="seva" data-video="assets/website-polish/7ae1c4f77bf4a5babe845b06ff1126437936639b69c7a291472d366be8a6a686.mp4" data-poster="assets/website-polish/d20c7944f205a91df31678ac63efbfb53a02a0082007d334dceb31a6d5b7889b.webp">SEVA</option><option value="gt" data-video="assets/website-polish/403d24f060fde8017e16767cc84abcbb045e8654ccf5cdc829d530ac053bd1a9.mp4" data-poster="assets/website-polish/4a9b705ccbe841beded7452baadf895005a6c685c438dc3f6e58bb65e8f66f39.webp">Ground Truth</option></select>
       <select class="world-method-right" aria-label="Right method for Lantern Street"><option value="gt" data-video="assets/website-polish/403d24f060fde8017e16767cc84abcbb045e8654ccf5cdc829d530ac053bd1a9.mp4" data-poster="assets/website-polish/4a9b705ccbe841beded7452baadf895005a6c685c438dc3f6e58bb65e8f66f39.webp">Ground Truth</option><option value="navworld" data-video="assets/website-polish/73a8cd6fef9daef8e2147d3defd2c65cb54f4d51d9485a5fb9d782b76a2a5185.mp4" data-poster="assets/website-polish/e0245a1c74729bf90edb6f4b2dec5e339ade1e5d3a51090dc6b6a25d68095031.webp">RecallWorld</option><option value="sana" data-video="assets/website-polish/02af63edf8883009e524894ddcf94d72babeae79004226755ca5acd53fca9bd0.mp4" data-poster="assets/website-polish/ef6a655bd0b82986cd8893ca2a7be13ba0b452762bcd03d96bbd3c10dd2131dd.webp">SANA-WM</option><option value="gen3c" data-video="assets/website-polish/8bb2f597d2294acbbdf7e7fc6103bce141733e5398cc7acd582065ec07ac7bc9.mp4" data-poster="assets/website-polish/3a0597c05c64e8fb6eadae60834bee5d0f37529a033582814db65c6016c7572b.webp">GEN3C</option><option value="seva" data-video="assets/website-polish/7ae1c4f77bf4a5babe845b06ff1126437936639b69c7a291472d366be8a6a686.mp4" data-poster="assets/website-polish/d20c7944f205a91df31678ac63efbfb53a02a0082007d334dceb31a6d5b7889b.webp">SEVA</option></select></div>
@@ -482,7 +461,16 @@
         <input class="world-range" type="range" min="0" max="100" value="50" aria-label="Compare City Plaza">
       </div>
       <p class="world-status" role="status" hidden>The videos could not load. Please refresh to retry.</p>
-    </article></div></div></div></div></section>
+    </article></div></div>
+<div class="worlds-navigation slideshow-controls" aria-label="Choose a gallery set">
+      <button type="button" class="slideshow-prev" data-gallery-previous aria-label="Previous gallery set"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="worlds-page-dots">
+        <button type="button" class="worlds-page-dot slideshow-dot" data-gallery-dot="0" aria-pressed="true" aria-label="Gallery set 1"></button>
+        <button type="button" class="worlds-page-dot slideshow-dot" data-gallery-dot="1" aria-pressed="false" aria-label="Gallery set 2"></button>
+        <button type="button" class="worlds-page-dot slideshow-dot" data-gallery-dot="2" aria-pressed="false" aria-label="Gallery set 3"></button>
+      </div>
+      <button type="button" class="slideshow-next" data-gallery-next aria-label="Next gallery set"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+    </div></div></div></section>
 <section id="native-fisheye-gallery" class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Generation from Fisheye Images</h2>
@@ -718,7 +706,7 @@
       eprint={2611.28666},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2611.28666},
+      url={https://arxiv.org/abs/2611.28666}
 }
 </code></pre></div></div></section>
 
