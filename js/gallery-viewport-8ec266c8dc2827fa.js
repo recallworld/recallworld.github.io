@@ -8,7 +8,7 @@
     baseline:element.querySelector(".world-baseline"),
     select:element.querySelector(".world-method-left"),
     referenceSelect:element.querySelector(".world-method-right"), epoch:0,
-    ready:false, loading:false, restarting:false, reload:false
+    ready:false, loading:false, restarting:false, reload:false, userPaused:false
   }));
   const visibleCards = new WeakSet();
   function active(card) {
@@ -45,7 +45,7 @@
     });
   }
   async function start(card, reset = false) {
-    if (document.hidden || !active(card) || !card.ready || card.restarting) return;
+    if (document.hidden || !active(card) || !card.ready || card.restarting || card.userPaused) return;
     const epoch = card.epoch;
     card.restarting = true;
     pause(card);
@@ -146,6 +146,15 @@
       range.setAttribute("aria-valuetext",`${range.value} percent ${card.select.selectedOptions[0].textContent}, ${100-Number(range.value)} percent ${card.referenceSelect.selectedOptions[0].textContent}`);
     }
     range.addEventListener("input",divider);
+    // Click (not drag) on a comparison toggles playback for that card.
+    let downAt = null;
+    frame.addEventListener("pointerdown", event => { downAt = {x: event.clientX, y: event.clientY}; }, true);
+    frame.addEventListener("click", event => {
+      if (!downAt || Math.hypot(event.clientX - downAt.x, event.clientY - downAt.y) >= 6) return;
+      downAt = null;
+      card.userPaused = !card.userPaused;
+      if (card.userPaused) pause(card); else start(card);
+    });
     // With a mouse, the divider follows the pointer (as in the teaser above) and
     // recenters when the pointer leaves; touch and keyboard keep the range input.
     const hover = window.matchMedia("(hover: hover) and (pointer: fine)");

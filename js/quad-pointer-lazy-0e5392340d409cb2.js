@@ -6,10 +6,52 @@
   const stage = document.querySelector("#forest-comparison");
   if (!stage) return;
   const videos = [...stage.querySelectorAll("video")];
+  // One packed 2x2 video drawn into the canvas: tiles are ordered top-left, top-right,
+  // bottom-left, bottom-right, and each quadrant shows its method's pixels for that
+  // region of the frame.
+  const canvas = stage.querySelector(".quad-canvas");
+  const context = canvas.getContext("2d");
+  const source = videos[0];
+  const poster = new Image();
+  let drawFrame = 0;
+  function sizeCanvas() {
+    const rect = canvas.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const w = Math.max(1, Math.round(rect.width * dpr)), h = Math.max(1, Math.round(rect.height * dpr));
+    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+  }
+  function draw() {
+    const img = source.readyState >= 2 ? source : (poster.complete && poster.naturalWidth ? poster : null);
+    if (!img) return;
+    const sw = (img.videoWidth || img.naturalWidth) / 2, sh = (img.videoHeight || img.naturalHeight) / 2;
+    const cw = canvas.width, ch = canvas.height, px = cw * x / 100, py = ch * y / 100;
+    const regions = [[0, 0, px, py], [px, 0, cw - px, py], [0, py, px, ch - py], [px, py, cw - px, ch - py]];
+    regions.forEach(([dx, dy, dw, dh], k) => {
+      if (dw <= 0 || dh <= 0) return;
+      const tx = (k % 2) * sw, ty = Math.floor(k / 2) * sh;
+      context.drawImage(img, tx + sw * dx / cw, ty + sh * dy / ch, sw * dw / cw, sh * dh / ch, dx, dy, dw, dh);
+    });
+  }
+  function requestDraw() {
+    if (drawFrame) return;
+    drawFrame = requestAnimationFrame(() => { drawFrame = 0; draw(); });
+  }
+  function drawLoop() {
+    draw();
+    if (!source.paused && !source.ended) {
+      if (source.requestVideoFrameCallback) source.requestVideoFrameCallback(drawLoop);
+      else requestAnimationFrame(drawLoop);
+    }
+  }
+  source.addEventListener("play", drawLoop);
+  source.addEventListener("seeked", requestDraw);
+  source.addEventListener("loadeddata", requestDraw);
+  poster.addEventListener("load", requestDraw);
+  if (source.dataset.poster) poster.src = source.dataset.poster;
+  new ResizeObserver(() => { sizeCanvas(); draw(); }).observe(canvas);
   const handle = stage.querySelector(".quad-handle");
   const toggle = document.querySelector("[data-quad-play]");
   const status = document.querySelector("#headline-status");
-  let downAt = null, x = 50, y = 50, drag = null, visible = false, pausedByUser = false;
+  let x = 50, y = 50, drag = null, visible = false, pausedByUser = false;
   let loaded = false, loading = false, aligning = false, epoch = 0, duration = 0;
   let pointerFrame = 0, latestPointer = null, resumeTime = 0, releaseTimer = 0;
   function clearPointer() {
@@ -30,6 +72,7 @@
     handle.setAttribute("aria-label", `Comparison divider: ${Math.round(x)}% across, ${Math.round(y)}% down. Use arrow keys to move.`);
     stage.dataset.splitX = String(x);
     stage.dataset.splitY = String(y);
+    if (typeof requestDraw === "function") requestDraw();
   }
   function pointer(event) {
     const rect = stage.getBoundingClientRect();
@@ -42,7 +85,6 @@
     if (event.pointerType !== "mouse" && !event.target.closest(".quad-handle")) return;
     event.preventDefault();
     drag = event.pointerId;
-    downAt = {x: event.clientX, y: event.clientY, handle: !!event.target.closest(".quad-handle")};
     stage.setPointerCapture(drag);
     stage.classList.add("is-dragging");
     pointer(event);
@@ -56,10 +98,7 @@
   });
   function release(event) {
     if (event.pointerId !== drag) return;
-    // A click (no real drag) on the video toggles playback.
-    if (event.type === "pointerup" && downAt && !downAt.handle &&
-        Math.hypot(event.clientX - downAt.x, event.clientY - downAt.y) < 6) toggle.click();
-    downAt = null;
+
     clearPointer();
     drag = null;
     stage.classList.remove("is-dragging");
@@ -67,6 +106,14 @@
     if (event.pointerType === "mouse" && (event.clientX < rect.left || event.clientX > rect.right ||
         event.clientY < rect.top || event.clientY > rect.bottom)) position(50, 50);
   }
+  // Click (not drag) anywhere on the video toggles playback; the handle keeps its drag role.
+  let downAt = null;
+  stage.addEventListener("pointerdown", event => { downAt = {x: event.clientX, y: event.clientY}; }, true);
+  stage.addEventListener("click", event => {
+    if (event.target.closest(".quad-handle") || !downAt) return;
+    if (Math.hypot(event.clientX - downAt.x, event.clientY - downAt.y) < 6) toggle.click();
+    downAt = null;
+  });
   stage.addEventListener("pointerup", release);
   stage.addEventListener("pointercancel", release);
   handle.addEventListener("keydown", event => {
@@ -154,7 +201,6 @@
     loading = true;
     videos.forEach(video => {
       if (video.dataset.src) video.src = pick(video.dataset.src);
-      if (video.dataset.poster) video.poster = video.dataset.poster;
       video.preload = "auto";
       video.load();
     });

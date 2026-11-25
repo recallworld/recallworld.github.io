@@ -3028,3 +3028,23 @@ html[data-theme="dark"] #bibtex .bibtex-container  {
   white-space: nowrap;
   border: 0;
 }
+
+/* The teaser is one 2x2 packed video (RecallWorld, ground truth, SANA-WM, GEN3C) drawn
+   into a canvas, as on the GOFish page: one download, and the four methods can never
+   drift out of sync. The source video stays in the DOM (some browsers stop decoding
+   display:none video) but is invisible. */
+.quad-stage .quad-source  {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.quad-stage .quad-canvas  {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
