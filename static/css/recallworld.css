@@ -3260,3 +3260,7 @@ main :is(p, li, figcaption, .publication-authors, .publication-affiliations) a:n
 /* Like GOFish, hovering draws the underline without also changing the link colour. */
 main :is(p, li, figcaption, .publication-authors) a:not(.button):not(.icon-link):not(.result-baseline-link):hover,
 .footer .content p a:not(.icon-link):hover  { color: var(--link-color); }
+/* Acknowledgement and credit links in the footer are black like the surrounding text;
+   the sliding underline marks them on hover. */
+.footer .content p a:not(.icon-link), .footer .content p a:not(.icon-link):hover  { color: #000; }
+html[data-theme="dark"] .footer .content p a:not(.icon-link), html[data-theme="dark"] .footer .content p a:not(.icon-link):hover  { color: #f8f9fc; }
