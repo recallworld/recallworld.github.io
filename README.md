@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/branding/96c7dbc5ca465cda4b119fba0ab086978555336f6aa58c515c6743bd0a0e00de.png" alt="RecallWorld logo" width="540">
+  <img src="assets/branding/e1275424cbdc73aa340b7fa9351f6ca79fc7b9fce77369a3034a7812b2fc5449.png" alt="RecallWorld logo" width="540">
 </p>
 
 <h1 align="center">RecallWorld: Episodic Memory for Persistent Embodied Video World Models</h1>
