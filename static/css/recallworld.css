@@ -3354,3 +3354,6 @@ html[data-theme="dark"] :is(#native-fisheye-gallery, #gallery) .fisheye-inputs-p
 #gallery .explore-browser  { grid-template-columns: var(--scene-rail-width) minmax(0, 1fr); max-width: min(1100px, 100%); }
 /* The explorer's source videos are decode-only; the canvas shows them. */
 #gallery .explore-stage video  { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+/* Explorer pills scale with its stage: 944/1100 of the teaser's pill size. */
+#gallery .tri-label  { font-size: clamp(12px, 1.55vw, 20.5px); }
+@media (max-width: 600px)  { #gallery .tri-label  { font-size: clamp(11px, 3.1vw, 12.5px); } }
