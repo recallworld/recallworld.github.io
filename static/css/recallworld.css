@@ -3166,3 +3166,20 @@ html[data-theme="dark"] .footer .icon-link:hover, html[data-theme="dark"] .foote
   max-width: calc(50% - 20px);
 }
 #native-fisheye-gallery .world-label-detail  { font-size: .78em; }
+
+/* Phones: stack the teaser pills flush (no gap) with tighter padding and corner
+   offsets, so the labels cover less of the small frame. */
+@media (max-width: 600px)  {
+  #headline-comparison .quad-label  { gap: 0; }
+  #headline-comparison .quad-method, #headline-comparison .quad-metrics span  {
+    padding: .2em .45em;
+    border-radius: 0;
+  }
+  #headline-comparison .quad-label > :first-child, #headline-comparison .quad-label .quad-metrics span:first-child:only-child  { border-radius: 5px 5px 0 0; }
+  #headline-comparison .quad-label .quad-metrics span:last-child  { border-radius: 0 0 5px 5px; }
+  #headline-comparison .quad-label-tr .quad-method:only-child  { border-radius: 5px; }
+  #headline-comparison .quad-label-tl, #headline-comparison .quad-label-tr  { top: 6px; }
+  #headline-comparison .quad-label-bl, #headline-comparison .quad-label-br  { bottom: 6px; }
+  #headline-comparison .quad-label-tl, #headline-comparison .quad-label-bl  { left: 6px; }
+  #headline-comparison .quad-label-tr, #headline-comparison .quad-label-br  { right: 6px; }
+}
