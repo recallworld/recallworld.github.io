@@ -146,6 +146,24 @@
       range.setAttribute("aria-valuetext",`${range.value} percent ${card.select.selectedOptions[0].textContent}, ${100-Number(range.value)} percent ${card.referenceSelect.selectedOptions[0].textContent}`);
     }
     range.addEventListener("input",divider);
+    // With a mouse, the divider follows the pointer (as in the teaser above) and
+    // recenters when the pointer leaves; touch and keyboard keep the range input.
+    const hover = window.matchMedia("(hover: hover) and (pointer: fine)");
+    let follow = 0;
+    frame.addEventListener("pointermove", event => {
+      if (event.pointerType !== "mouse" || !hover.matches || follow) return;
+      follow = requestAnimationFrame(() => {
+        follow = 0;
+        const rect = frame.getBoundingClientRect();
+        range.value = Math.round(Math.min(100, Math.max(0, (event.clientX - rect.left) / rect.width * 100)));
+        divider();
+      });
+    });
+    frame.addEventListener("pointerleave", event => {
+      if (event.pointerType !== "mouse" || !hover.matches) return;
+      cancelAnimationFrame(follow); follow = 0;
+      range.value = range.defaultValue; divider();
+    });
     card.select.addEventListener("change", () => {divider();load(card);});
     card.referenceSelect.addEventListener("change", () => {divider();load(card);});
     divider();
