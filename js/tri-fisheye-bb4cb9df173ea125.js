@@ -7,7 +7,7 @@
   const AV1 = document.createElement("video").canPlayType('video/mp4; codecs="av01.0.05M.08"') === "probably";
   const pick = url => (AV1 && url.endsWith(".mp4")) ? url.slice(0, -4) + ".av1.mp4" : url;
   const hover = window.matchMedia("(hover: hover) and (pointer: fine)");
-  document.querySelectorAll(".tri-stage").forEach(stage => {
+  document.querySelectorAll("#native-fisheye-gallery .tri-stage").forEach(stage => {
     const video = stage.querySelector("video");
     const canvas = stage.querySelector("canvas");
     const context = canvas.getContext("2d");
