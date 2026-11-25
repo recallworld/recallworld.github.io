@@ -1665,7 +1665,7 @@ html[data-theme="light"] .theme-icon-moon  {
   display: block;
   width: min(520px, 85%);
   height: auto;
-  margin: 0 auto 0.65rem;
+  margin: 0 auto 0.35rem;
 }
 
 .publication-title .recallworld-subtitle  {
@@ -1952,7 +1952,6 @@ html[data-theme="light"] .memory-artwork  {
 .quad-label-tl  {
   left: 12px;
   top: 12px;
-  background: #941f30ed;
 }
 
 .quad-label-tr  {
@@ -2935,4 +2934,94 @@ html[data-theme="dark"] #bibtex .bibtex-container  {
   #bibtex .copy-code-btn  {
     transition: none;
   }
+}
+
+/* Starting image as an inset in the ground-truth quadrant of the teaser. The wrapper
+   carries the .quad-tr clip-path, so the inset is always cut to the GT region as the
+   divider moves and never covers another method. */
+.quad-start-inset  {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.quad-start-inset figure  {
+  position: absolute;
+  top: calc(12px + 2.6em);
+  right: 12px;
+  width: 24%;
+  margin: 0;
+  font: 500 clamp(11px, 1.2vw, 16px) / 1.15 "Google Sans", "Noto Sans", sans-serif;
+}
+.quad-start-inset img  {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px #0008;
+}
+.quad-start-inset figcaption  {
+  display: table;
+  margin: 4px 0 0 auto;
+  padding: .3em .6em;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, .55);
+  color: #fff;
+  font-weight: 600;
+}
+@media (max-width: 600px)  {
+  .quad-start-inset figure  {
+    top: 36px;
+    right: 8px;
+    width: 30%;
+  }
+}
+
+/* Keep Georgia Tech and UIUC together on one line where the row is wide enough. */
+.affiliation-pair  {
+  display: inline-block;
+  white-space: nowrap;
+}
+@media (max-width: 768px)  {
+  .affiliation-pair  {
+    display: inline;
+    white-space: normal;
+  }
+}
+
+/* Teaser labels as a stack of separate pills, one per line, as on the GOFish page:
+   method name in a bold pill, each metric in its own lighter pill. */
+#headline-comparison .quad-label  {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  max-width: none;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+#headline-comparison .quad-label-tr, #headline-comparison .quad-label-br  { align-items: flex-end; }
+#headline-comparison .quad-metrics  { display: contents; }
+#headline-comparison .quad-method,
+#headline-comparison .quad-metrics span  {
+  display: block;
+  padding: .3em .6em;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, .55);
+  color: #fff;
+  white-space: nowrap;
+}
+#headline-comparison .quad-method  { font-weight: 600; }
+#headline-comparison .quad-metrics span  { font-weight: 400; }
+#headline-comparison .quad-label-tl .quad-method  { background: #941f30e0; }
+.visually-hidden  {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }

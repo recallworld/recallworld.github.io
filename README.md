@@ -28,8 +28,8 @@ Video world models generate plausible novel views but often lack persistent memo
 
 ```bibtex
 @misc{bose2026recallworldepisodicmemorypersistent,
-      title={RecallWorld: Episodic Memory for Persistent Embodied Video World Models},
-      author={Sarosij Bose and Gitika Karumuri and Chenqi Li and Allen Tu and Srikumar Sastry and Mellon Zhang and Avinash Ravichandran and Alexander Schwing and Konstantinos Karydis and Amit K. Roy Chowdhury},
+      title={{RecallWorld}: Episodic Memory for Persistent Embodied Video World Models},
+      author={Bose, Sarosij and Karumuri, Gitika and Li, Chenqi and Tu, Allen and Sastry, Srikumar and Zhang, Mellon and Ravichandran, Avinash and Schwing, Alexander and Karydis, Konstantinos and {Roy Chowdhury}, Amit K.},
       year={2026},
       eprint={2611.28666},
       archivePrefix={arXiv},
