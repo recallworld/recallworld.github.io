@@ -3285,3 +3285,11 @@ html[data-theme="dark"]  { --arrow: #e2e4e9; --bg-chip: #1e1e1e; --text-heading:
 #gallery .worlds-page-dot.slideshow-dot:hover  { background: var(--dot-hover); }
 #gallery .worlds-page-dot.slideshow-dot.is-active, #gallery .worlds-page-dot.slideshow-dot[aria-pressed="true"]  { background: var(--dot-active); transform: scale(1.25); }
 #gallery .worlds-carousel  { padding-bottom: 0; }
+/* Result tabs move like the header buttons (GOFish): eased colours, 2px lift on hover,
+   press back on click. The selected tab keeps its maroon fill on hover. */
+.result-tab  { transition: background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.result-tab:hover  { transform: translateY(-2px); box-shadow: 0 4px 18px #941f3038; }
+.result-tab:active  { transform: translateY(0); box-shadow: 0 1px 4px #941f3030; }
+.result-tab[aria-selected="true"]:hover  { background: #941f30; border-color: #c66a7d; color: #fff; }
+@media (hover: none)  { .result-tab:hover  { transform: none; box-shadow: none; } }
+@media (prefers-reduced-motion: reduce)  { .result-tab  { transition: none; } .result-tab:hover  { transform: none; } }
