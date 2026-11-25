@@ -3325,10 +3325,10 @@ html[data-theme="dark"]  { --arrow: #e2e4e9; --bg-chip: #1e1e1e; --text-heading:
 
 /* Per-thumbnail dataset and FoV pill (single merged fisheye list). */
 #native-fisheye-gallery .fisheye-choice  { position: relative; }
-#native-fisheye-gallery .fisheye-choice .fisheye-fov-pill  { position: absolute; left: 6px; bottom: 6px; display: block; padding: .18em .5em; border-radius: 5px; background: rgba(0, 0, 0, .6); color: #fff; font: 600 .68rem / 1.2 "Google Sans", "Noto Sans", sans-serif; white-space: nowrap; pointer-events: none; }
+#native-fisheye-gallery .fisheye-choice .fisheye-fov-pill  { position: absolute; left: 6px; bottom: 6px; display: block; padding: .18em .5em; border-radius: 5px; background: rgba(0, 0, 0, .6); color: #fff; font: 600 .85rem / 1.2 "Google Sans", "Noto Sans", sans-serif; white-space: nowrap; pointer-events: none; }
 @media (max-width: 768px)  {
   #native-fisheye-gallery .fisheye-scene-viewport  { grid-row: 1 / -1; }
-  #native-fisheye-gallery .fisheye-choice .fisheye-fov-pill  { left: 3px; bottom: 3px; padding: .12em .35em; font-size: .56rem; }
+  #native-fisheye-gallery .fisheye-choice .fisheye-fov-pill  { left: 3px; bottom: 3px; padding: .12em .35em; font-size: .7rem; }
 }
 /* Non-interactive heading pill above the scene list (same look as the stage pills). */
 #native-fisheye-gallery .fisheye-inputs-pill  { flex: 0 0 auto; align-self: stretch; box-sizing: border-box; padding: .25em .4em; border: 1.5px solid var(--text-heading); border-radius: 6px; background: #fff; color: var(--text-heading); text-align: center; font: 600 clamp(11px, 1.05vw, 14px) / 1.15 "Google Sans", "Noto Sans", sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
