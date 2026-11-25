@@ -63,7 +63,7 @@
   <link rel="stylesheet" href="static/css/academicons.min.css?v=d1ad1d52e508">
   <link rel="stylesheet" href="static/css/academic-template.css?v=d7034a9a374d">
   <link rel="stylesheet" href="static/css/slideshow.css?v=6724371e607350a8">
-  <link rel="stylesheet" href="static/css/recallworld.css?v=7229d3ff9558056f">
+  <link rel="stylesheet" href="static/css/recallworld.css?v=243bd833e8b956b7">
   
 
 
@@ -176,7 +176,7 @@
     The dashed boundary marks the extra scene coverage retained from the fisheye image.</p></div></div></div><div class="slideshow-controls"><button type="button" class="slideshow-prev" aria-label="Previous figure"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg></button><button type="button" class="slideshow-next" aria-label="Next figure"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button></div><div class="slideshow-status" aria-live="polite"></div></div></div></section>
 <section id="visibility" class="section" aria-labelledby="visibility-title"><div class="container is-max-desktop"><h2 id="visibility-title" class="title is-3 has-text-centered">Visibility-Guided Generation</h2><div class="content has-text-justified section-copy"><p><strong>Memory must respect what the camera can see.</strong>
     <span class="navworld-name">RecallWorld</span> resolves depth conflicts before fusing appearance, preventing farther projections from replacing an occluding front surface.</p></div><figure class="method-figure"><img src="assets/paper-20261117/2233cb02bb1549d32cb3d8c7292e93b8f0b8b09af83067061cb46ff9ba19bce2.webp" loading="lazy" width="1400" height="1058" alt="Overlapping Scenelets, front-most Scenelet map, generation without visibility, visibility-resolved generation and ground truth." decoding="async" fetchpriority="low" onerror="this.onerror=null;this.src='assets/paper-20261117/78c610833f1fbbc49c1c2ca66119f60ec3b0cb1e2a7e414b4338fcf5174df27d.png';"><figcaption><p><strong>Front surfaces stay in front.</strong> Our visibility guidance resolves conflicting projections before combining appearance. This <a href="https://arxiv.org/abs/2602.18164" target="_blank" rel="noopener noreferrer">GrandTour</a> example shows the resulting spatial condition.</p></figcaption></figure></div></section>
-<section id="gallery" class="section hero is-light" aria-labelledby="gallery-title"><div class="container is-max-desktop"><h2 id="gallery-title" class="title is-3 has-text-centered">Explore the Worlds</h2><p class="has-text-centered mb-5">Compare <span class="navworld-name">RecallWorld</span> and other methods at <strong style="color:inherit">partial and full</strong> revisits with Ground Truth.</p><div class="fisheye-browser explore-browser">
+<section id="gallery" class="section hero is-light" aria-labelledby="gallery-title"><div class="container is-max-desktop"><h2 id="gallery-title" class="title is-3 has-text-centered">Explore the Worlds</h2><p class="has-text-centered mb-5">Compare <span class="navworld-name">RecallWorld</span> and baseline methods at <strong style="color:inherit">partial and full</strong> revisits with Ground Truth.</p><div class="fisheye-browser explore-browser">
 <div class="fisheye-inputs" role="group" aria-label="Choose a starting image">
   <span class="fisheye-inputs-pill">Starting Image</span>
   <div class="fisheye-scene-viewport"><div class="fisheye-scene-group">
@@ -208,7 +208,7 @@
 <section id="native-fisheye-gallery" class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Generation from Fisheye Images</h2>
-    <p class="native-gallery-caption has-text-centered"><span class="navworld-name">RecallWorld's</span> unified spatial memory turns full-FoV fisheye observations into perspective videos whereas SANA-WM shows radial distortions.</p>
+    <p class="native-gallery-caption has-text-centered"><span class="navworld-name">RecallWorld's</span> unified spatial memory turns full field-of-view fisheye observations into perspective videos whereas SANA-WM shows radial distortions.</p>
     <div class="fisheye-browser">
       <div class="fisheye-inputs" role="group" aria-label="Choose a fisheye input">
   <h3>Fisheye Inputs</h3>
