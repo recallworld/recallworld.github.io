@@ -1572,9 +1572,8 @@ html[data-theme="light"] .publication-affiliations a[href]  {
   color: var(--ink) !important;
 }
 
-html[data-theme="light"] a:not(.button):hover, html[data-theme="light"] .hero.is-light a:not(.button):hover, html[data-theme="light"] .publication-authors[aria-label="Authors"] a[href]:hover  {
-  color: #0d497b !important;
-}
+/* (Removed: a light-theme !important hover recolour; links now keep their colour and
+   show the sliding underline instead, as on GOFish.) */
 
 html[data-theme="light"] .world-toolbar select  {
   background: #fff;
@@ -3074,7 +3073,7 @@ html[data-theme="dark"] #bibtex .bibtex-container  {
   color: var(--ink);
   transition: color .2s ease, transform .2s ease, filter .2s ease;
 }
-.footer .icon-link:hover, .footer .colophon a:not(.plain-link):hover  {
+.footer .icon-link:hover  {
   transform: translateY(-3px);
   filter: drop-shadow(0 3px 6px #0006);
 }
@@ -3088,11 +3087,6 @@ html[data-theme="dark"] #bibtex .bibtex-container  {
   margin: 0 0 .5rem;
 }
 .colophon-marks  { white-space: nowrap; }
-.footer .colophon a:not(.plain-link)  {
-  display: inline-block;
-  color: var(--ink);
-  transition: transform .2s ease, filter .2s ease;
-}
 .footer .colophon .colophon-toggle  {
   -webkit-appearance: none;
   appearance: none;
