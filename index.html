@@ -63,7 +63,7 @@
   <link rel="stylesheet" href="static/css/academicons.min.css?v=d1ad1d52e508">
   <link rel="stylesheet" href="static/css/academic-template.css?v=d7034a9a374d">
   <link rel="stylesheet" href="static/css/slideshow.css?v=6724371e607350a8">
-  <link rel="stylesheet" href="static/css/recallworld.css?v=20aad590a18e8f01">
+  <link rel="stylesheet" href="static/css/recallworld.css?v=4805ddf22286d166">
   
 
 
@@ -101,6 +101,7 @@
 
 
 <script defer src="js/slideshow-b79d95b2ee8e6261.js"></script>
+<script defer src="js/tri-fisheye-2add4c5b3885610e.js"></script>
 <script defer src="js/bibtex-4493265da142e5c1.js"></script>
 </head>
 <body>
@@ -503,160 +504,20 @@
 </div>
       <div class="fisheye-comparisons">
         <div id="fisheye-comparison-0" class="fisheye-comparison" data-gallery-page="native-0"
-        aria-hidden="false">
-        <article class="world-card" data-case="grandtour-057f678032eb1714">
-      <div class="native-input-heading"><h3>Village Street (120° FoV)</h3></div>
-      <div class="world-toolbar"><select class="world-method-left" aria-label="Left method for Village Street (120° FoV)"><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/46a7314353abd584d7819b65b30b7c2b73dc803e0c612d5436c09a3083dac2d2.mp4" data-poster="assets/native-fisheye/5b8f4d2d2ab24809976a1e624b4d86cc4e022c15b9537ce6df578e9383b2651e.webp">RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/95caa5528123ad7fc75a4caf694f09c0ec21cf2b78c345d0d3c3c9fa3d670f92.mp4" data-poster="assets/native-fisheye/ee353918fad4a45d1aedacfa6dc7d5a439254f3da88fe0fc1d277c40a7a6b0b9.webp" selected>SANA-WM (Raw Fisheye)</option><option value="gt" data-video="assets/native-fisheye/1344cbc98a533255330398af4e0b71c80c6f4c00ca95728b0cd146aed60eb142.mp4" data-poster="assets/native-fisheye/b581629116f7bb5c64c3d9023bfeae2ed5c0f18b5792b4d96bafa562e559f313.webp">Ground Truth</option></select>
-        <select class="world-method-right" aria-label="Right method for Village Street (120° FoV)"><option value="gt" data-video="assets/native-fisheye/1344cbc98a533255330398af4e0b71c80c6f4c00ca95728b0cd146aed60eb142.mp4" data-poster="assets/native-fisheye/b581629116f7bb5c64c3d9023bfeae2ed5c0f18b5792b4d96bafa562e559f313.webp">Ground Truth</option><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/46a7314353abd584d7819b65b30b7c2b73dc803e0c612d5436c09a3083dac2d2.mp4" data-poster="assets/native-fisheye/5b8f4d2d2ab24809976a1e624b4d86cc4e022c15b9537ce6df578e9383b2651e.webp" selected>RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/95caa5528123ad7fc75a4caf694f09c0ec21cf2b78c345d0d3c3c9fa3d670f92.mp4" data-poster="assets/native-fisheye/ee353918fad4a45d1aedacfa6dc7d5a439254f3da88fe0fc1d277c40a7a6b0b9.webp">SANA-WM (Raw Fisheye)</option></select></div>
-      <div class="world-frame" style="aspect-ratio:640/352">
-        <video class="world-ours world-reference" muted playsinline preload="none"
-          width="640" height="352" data-video="assets/native-fisheye/46a7314353abd584d7819b65b30b7c2b73dc803e0c612d5436c09a3083dac2d2.mp4"
-          data-poster="assets/native-fisheye/5b8f4d2d2ab24809976a1e624b4d86cc4e022c15b9537ce6df578e9383b2651e.webp" aria-label="RecallWorld (Raw Fisheye): Village Street (120° FoV)"></video>
-        <video class="world-baseline world-selected" muted playsinline preload="none"
-          width="640" height="352" data-poster="assets/native-fisheye/ee353918fad4a45d1aedacfa6dc7d5a439254f3da88fe0fc1d277c40a7a6b0b9.webp"
-          aria-label="Selected method: Village Street (120° FoV)"></video>
-        <span class="world-label baseline-label">SANA-WM<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-label ours-label">RecallWorld<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-divider" aria-hidden="true"></span>
-        <input class="world-range" type="range" min="0" max="100" value="50"
-          aria-label="Compare Village Street (120° FoV)">
-      </div>
-      <p class="world-status" role="status" hidden>The videos could not load.
-        Please refresh to retry.</p>
-    </article></div>
+        aria-hidden="false"><div class="tri-stage" data-src="assets/native-fisheye/tri-87210fd9b7219131.mp4" data-poster="assets/native-fisheye/tri-87210fd9b7219131.webp" title="Click to pause or play"><video class="quad-source" muted playsinline preload="none" aria-hidden="true"></video><canvas class="quad-canvas" role="img" aria-label="Village Street: RecallWorld (top left) and SANA-WM (bottom left) from a raw 120° fisheye input, ground truth on the right"></canvas><span class="tri-label tri-label-tl"><span class="tri-pill tri-ours">RecallWorld (Ours)</span></span><span class="tri-label tri-label-bl"><span class="tri-pill">SANA-WM</span></span><span class="tri-label tri-label-tr"><span class="tri-pill">Ground Truth</span></span><span class="tri-label tri-label-br"><span class="tri-pill">Raw 120° Fisheye Input</span></span><span class="tri-line tri-line-x" aria-hidden="true"></span><span class="tri-line tri-line-y" aria-hidden="true"></span><button type="button" class="quad-handle" aria-label="Move the comparison dividers with arrow keys; Space pauses"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26m-17-9 4-4 4 4m-8 18 4 4 4-4M7 12l-4 4 4 4m18-8 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
 
 <div id="fisheye-comparison-5" class="fisheye-comparison" data-gallery-page="native-5"
-        aria-hidden="true" hidden>
-        <article class="world-card" data-case="grandtour-52d3cdd425297c18">
-      <div class="native-input-heading"><h3>Civic Plaza (120° FoV)</h3></div>
-      <div class="world-toolbar"><select class="world-method-left" aria-label="Left method for Civic Plaza (120° FoV)"><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/fecc4064981328c53c0659b9ea2b40af4bd0a950557fd8c0d2c5499626fc8294.mp4" data-poster="assets/native-fisheye/aa8ecc8214c69a1205c4236bce641359cd48f4cd1f23ae2753ddec263c41a523.webp">RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/02c1f1cb093749c36175780339df8f0514ca2e31e62aa3713f87402b0de40e84.mp4" data-poster="assets/native-fisheye/b2f2d3a1a03542f69c3487d4a66087769185e172700f8df5e0e0fa53c0356b59.webp" selected>SANA-WM (Raw Fisheye)</option><option value="gt" data-video="assets/native-fisheye/f5f50d09c02d7cccf152fa60a07e63a7fa98f6cc20da2adb0dbd7af4c5b9c2cc.mp4" data-poster="assets/native-fisheye/561ec44749bcb20ddf0a622dde19b4ef282d8a16a2cf895ab9bc03dbc6cf89de.webp">Ground Truth</option></select>
-        <select class="world-method-right" aria-label="Right method for Civic Plaza (120° FoV)"><option value="gt" data-video="assets/native-fisheye/f5f50d09c02d7cccf152fa60a07e63a7fa98f6cc20da2adb0dbd7af4c5b9c2cc.mp4" data-poster="assets/native-fisheye/561ec44749bcb20ddf0a622dde19b4ef282d8a16a2cf895ab9bc03dbc6cf89de.webp">Ground Truth</option><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/fecc4064981328c53c0659b9ea2b40af4bd0a950557fd8c0d2c5499626fc8294.mp4" data-poster="assets/native-fisheye/aa8ecc8214c69a1205c4236bce641359cd48f4cd1f23ae2753ddec263c41a523.webp" selected>RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/02c1f1cb093749c36175780339df8f0514ca2e31e62aa3713f87402b0de40e84.mp4" data-poster="assets/native-fisheye/b2f2d3a1a03542f69c3487d4a66087769185e172700f8df5e0e0fa53c0356b59.webp">SANA-WM (Raw Fisheye)</option></select></div>
-      <div class="world-frame" style="aspect-ratio:640/352">
-        <video class="world-ours world-reference" muted playsinline preload="none"
-          width="640" height="352" data-video="assets/native-fisheye/fecc4064981328c53c0659b9ea2b40af4bd0a950557fd8c0d2c5499626fc8294.mp4"
-          data-poster="assets/native-fisheye/aa8ecc8214c69a1205c4236bce641359cd48f4cd1f23ae2753ddec263c41a523.webp" aria-label="RecallWorld (Raw Fisheye): Civic Plaza (120° FoV)"></video>
-        <video class="world-baseline world-selected" muted playsinline preload="none"
-          width="640" height="352" data-poster="assets/native-fisheye/b2f2d3a1a03542f69c3487d4a66087769185e172700f8df5e0e0fa53c0356b59.webp"
-          aria-label="Selected method: Civic Plaza (120° FoV)"></video>
-        <span class="world-label baseline-label">SANA-WM<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-label ours-label">RecallWorld<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-divider" aria-hidden="true"></span>
-        <input class="world-range" type="range" min="0" max="100" value="50"
-          aria-label="Compare Civic Plaza (120° FoV)">
-      </div>
-      <p class="world-status" role="status" hidden>The videos could not load.
-        Please refresh to retry.</p>
-    </article></div>
+        aria-hidden="true" hidden><div class="tri-stage" data-src="assets/native-fisheye/tri-3d3a607cb7d01308.mp4" data-poster="assets/native-fisheye/tri-3d3a607cb7d01308.webp" title="Click to pause or play"><video class="quad-source" muted playsinline preload="none" aria-hidden="true"></video><canvas class="quad-canvas" role="img" aria-label="Civic Plaza: RecallWorld (top left) and SANA-WM (bottom left) from a raw 120° fisheye input, ground truth on the right"></canvas><span class="tri-label tri-label-tl"><span class="tri-pill tri-ours">RecallWorld (Ours)</span></span><span class="tri-label tri-label-bl"><span class="tri-pill">SANA-WM</span></span><span class="tri-label tri-label-tr"><span class="tri-pill">Ground Truth</span></span><span class="tri-label tri-label-br"><span class="tri-pill">Raw 120° Fisheye Input</span></span><span class="tri-line tri-line-x" aria-hidden="true"></span><span class="tri-line tri-line-y" aria-hidden="true"></span><button type="button" class="quad-handle" aria-label="Move the comparison dividers with arrow keys; Space pauses"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26m-17-9 4-4 4 4m-8 18 4 4 4-4M7 12l-4 4 4 4m18-8 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
 <div id="fisheye-comparison-7" class="fisheye-comparison" data-gallery-page="native-7"
-        aria-hidden="true" hidden>
-        <article class="world-card" data-case="m2dgr-aba079f800e858ea">
-      <div class="native-input-heading"><h3>Campus Gate (190° FoV)</h3></div>
-      <div class="world-toolbar"><select class="world-method-left" aria-label="Left method for Campus Gate (190° FoV)"><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/b89f4af13b3f057b6c503940f695578ce7a7e9816cbe46a792576defbd84054a.mp4" data-poster="assets/native-fisheye/05269c892e12ce7d467ab097cc9f94f904ea60bc9e44cf02b18569777e74f257.webp">RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/5cdd89bd6c3145c5c554c14d51353bebc1b1d1a03039f1cfca1a94fa9a54086c.mp4" data-poster="assets/native-fisheye/0e67bc1831f0bd405d94cdbc9def0518f698b1184bf020ef465573473240a14c.webp" selected>SANA-WM (Raw Fisheye)</option><option value="gt" data-video="assets/native-fisheye/ad4093c1b38674e270b8c869d936a18576be03539d31cf96dcd44bc21ad639d8.mp4" data-poster="assets/native-fisheye/b3b31e90b7ff395e586622459134e819c11038fc02c66a979d90c419db4b7586.webp">Ground Truth</option></select>
-        <select class="world-method-right" aria-label="Right method for Campus Gate (190° FoV)"><option value="gt" data-video="assets/native-fisheye/ad4093c1b38674e270b8c869d936a18576be03539d31cf96dcd44bc21ad639d8.mp4" data-poster="assets/native-fisheye/b3b31e90b7ff395e586622459134e819c11038fc02c66a979d90c419db4b7586.webp">Ground Truth</option><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/b89f4af13b3f057b6c503940f695578ce7a7e9816cbe46a792576defbd84054a.mp4" data-poster="assets/native-fisheye/05269c892e12ce7d467ab097cc9f94f904ea60bc9e44cf02b18569777e74f257.webp" selected>RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/5cdd89bd6c3145c5c554c14d51353bebc1b1d1a03039f1cfca1a94fa9a54086c.mp4" data-poster="assets/native-fisheye/0e67bc1831f0bd405d94cdbc9def0518f698b1184bf020ef465573473240a14c.webp">SANA-WM (Raw Fisheye)</option></select></div>
-      <div class="world-frame" style="aspect-ratio:640/352">
-        <video class="world-ours world-reference" muted playsinline preload="none"
-          width="640" height="352" data-video="assets/native-fisheye/b89f4af13b3f057b6c503940f695578ce7a7e9816cbe46a792576defbd84054a.mp4"
-          data-poster="assets/native-fisheye/05269c892e12ce7d467ab097cc9f94f904ea60bc9e44cf02b18569777e74f257.webp" aria-label="RecallWorld (Raw Fisheye): Campus Gate (190° FoV)"></video>
-        <video class="world-baseline world-selected" muted playsinline preload="none"
-          width="640" height="352" data-poster="assets/native-fisheye/0e67bc1831f0bd405d94cdbc9def0518f698b1184bf020ef465573473240a14c.webp"
-          aria-label="Selected method: Campus Gate (190° FoV)"></video>
-        <span class="world-label baseline-label">SANA-WM<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-label ours-label">RecallWorld<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-divider" aria-hidden="true"></span>
-        <input class="world-range" type="range" min="0" max="100" value="50"
-          aria-label="Compare Campus Gate (190° FoV)">
-      </div>
-      <p class="world-status" role="status" hidden>The videos could not load.
-        Please refresh to retry.</p>
-    </article></div>
+        aria-hidden="true" hidden><div class="tri-stage" data-src="assets/native-fisheye/tri-119bfab8615262ca.mp4" data-poster="assets/native-fisheye/tri-119bfab8615262ca.webp" title="Click to pause or play"><video class="quad-source" muted playsinline preload="none" aria-hidden="true"></video><canvas class="quad-canvas" role="img" aria-label="Campus Gate: RecallWorld (top left) and SANA-WM (bottom left) from a raw 190° fisheye input, ground truth on the right"></canvas><span class="tri-label tri-label-tl"><span class="tri-pill tri-ours">RecallWorld (Ours)</span></span><span class="tri-label tri-label-bl"><span class="tri-pill">SANA-WM</span></span><span class="tri-label tri-label-tr"><span class="tri-pill">Ground Truth</span></span><span class="tri-label tri-label-br"><span class="tri-pill">Raw 190° Fisheye Input</span></span><span class="tri-line tri-line-x" aria-hidden="true"></span><span class="tri-line tri-line-y" aria-hidden="true"></span><button type="button" class="quad-handle" aria-label="Move the comparison dividers with arrow keys; Space pauses"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26m-17-9 4-4 4 4m-8 18 4 4 4-4M7 12l-4 4 4 4m18-8 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
 <div id="fisheye-comparison-8" class="fisheye-comparison" data-gallery-page="native-8"
-        aria-hidden="true" hidden>
-        <article class="world-card" data-case="m2dgr-3e20e91a26f56010">
-      <div class="native-input-heading"><h3>Campus Facade (190° FoV)</h3></div>
-      <div class="world-toolbar"><select class="world-method-left" aria-label="Left method for Campus Facade (190° FoV)"><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/c58e44286bcef74f713a87f3463d39297ae479130ed62347aceed2886162f07f.mp4" data-poster="assets/native-fisheye/196f18c536bd11ea6e39d9125fd0757cf8c3429f586989db3decd6dc52614cde.webp">RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/07ff3935a6a87958889d03344e4d0fc29b37f8ccdcb8657756579db20730a197.mp4" data-poster="assets/native-fisheye/59b3ad39f012199d340d4530432e4ea63414504a455a72b30ccdc5df7fc0e057.webp" selected>SANA-WM (Raw Fisheye)</option><option value="gt" data-video="assets/native-fisheye/54e56bd9cdbb99c0e466521b44fc4a149a91ec2d6ca1e8eae64c577106ff1010.mp4" data-poster="assets/native-fisheye/4bf6bbb4db46aaedf4d5342a52f76abb3f42e29911ddb6bf7f7e640230316b5f.webp">Ground Truth</option></select>
-        <select class="world-method-right" aria-label="Right method for Campus Facade (190° FoV)"><option value="gt" data-video="assets/native-fisheye/54e56bd9cdbb99c0e466521b44fc4a149a91ec2d6ca1e8eae64c577106ff1010.mp4" data-poster="assets/native-fisheye/4bf6bbb4db46aaedf4d5342a52f76abb3f42e29911ddb6bf7f7e640230316b5f.webp">Ground Truth</option><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/c58e44286bcef74f713a87f3463d39297ae479130ed62347aceed2886162f07f.mp4" data-poster="assets/native-fisheye/196f18c536bd11ea6e39d9125fd0757cf8c3429f586989db3decd6dc52614cde.webp" selected>RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/07ff3935a6a87958889d03344e4d0fc29b37f8ccdcb8657756579db20730a197.mp4" data-poster="assets/native-fisheye/59b3ad39f012199d340d4530432e4ea63414504a455a72b30ccdc5df7fc0e057.webp">SANA-WM (Raw Fisheye)</option></select></div>
-      <div class="world-frame" style="aspect-ratio:640/352">
-        <video class="world-ours world-reference" muted playsinline preload="none"
-          width="640" height="352" data-video="assets/native-fisheye/c58e44286bcef74f713a87f3463d39297ae479130ed62347aceed2886162f07f.mp4"
-          data-poster="assets/native-fisheye/196f18c536bd11ea6e39d9125fd0757cf8c3429f586989db3decd6dc52614cde.webp" aria-label="RecallWorld (Raw Fisheye): Campus Facade (190° FoV)"></video>
-        <video class="world-baseline world-selected" muted playsinline preload="none"
-          width="640" height="352" data-poster="assets/native-fisheye/59b3ad39f012199d340d4530432e4ea63414504a455a72b30ccdc5df7fc0e057.webp"
-          aria-label="Selected method: Campus Facade (190° FoV)"></video>
-        <span class="world-label baseline-label">SANA-WM<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-label ours-label">RecallWorld<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-divider" aria-hidden="true"></span>
-        <input class="world-range" type="range" min="0" max="100" value="50"
-          aria-label="Compare Campus Facade (190° FoV)">
-      </div>
-      <p class="world-status" role="status" hidden>The videos could not load.
-        Please refresh to retry.</p>
-    </article></div>
+        aria-hidden="true" hidden><div class="tri-stage" data-src="assets/native-fisheye/tri-25bedb147123e3b6.mp4" data-poster="assets/native-fisheye/tri-25bedb147123e3b6.webp" title="Click to pause or play"><video class="quad-source" muted playsinline preload="none" aria-hidden="true"></video><canvas class="quad-canvas" role="img" aria-label="Campus Facade: RecallWorld (top left) and SANA-WM (bottom left) from a raw 190° fisheye input, ground truth on the right"></canvas><span class="tri-label tri-label-tl"><span class="tri-pill tri-ours">RecallWorld (Ours)</span></span><span class="tri-label tri-label-bl"><span class="tri-pill">SANA-WM</span></span><span class="tri-label tri-label-tr"><span class="tri-pill">Ground Truth</span></span><span class="tri-label tri-label-br"><span class="tri-pill">Raw 190° Fisheye Input</span></span><span class="tri-line tri-line-x" aria-hidden="true"></span><span class="tri-line tri-line-y" aria-hidden="true"></span><button type="button" class="quad-handle" aria-label="Move the comparison dividers with arrow keys; Space pauses"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26m-17-9 4-4 4 4m-8 18 4 4 4-4M7 12l-4 4 4 4m18-8 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
 <div id="fisheye-comparison-9" class="fisheye-comparison" data-gallery-page="native-9"
-        aria-hidden="true" hidden>
-        <article class="world-card" data-case="grandtour-2ae85da97b2a82b2">
-      <div class="native-input-heading"><h3>Station Approach (120° FoV)</h3></div>
-      <div class="world-toolbar"><select class="world-method-left" aria-label="Left method for Station Approach (120° FoV)"><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/85758d17af3befad7eff72ee0c86885dccd8093e85f600acc5b28b3ee36352fd.mp4" data-poster="assets/native-fisheye/05691c5cec5d3c368f07239954e3c35f95eb393722e0e797320ce61227f4a752.webp">RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/e123017d90ebb7226481b70e4efc9b3d4eadde1cf933c9f9c2d05362def9edbc.mp4" data-poster="assets/native-fisheye/28a6fa499fa5b241afc2af6d3b8b64d86140900f638c339a884c52711089c63f.webp" selected>SANA-WM (Raw Fisheye)</option><option value="gt" data-video="assets/native-fisheye/d307fd4776467c07b118ec57fb5e583583b5338cdd7b3ceb0afb3919d7af8eb8.mp4" data-poster="assets/native-fisheye/e6ad967a613c538fbcf2cd6afba7dd90855a15645e04b7fbff57888bbee9c00b.webp">Ground Truth</option></select>
-        <select class="world-method-right" aria-label="Right method for Station Approach (120° FoV)"><option value="gt" data-video="assets/native-fisheye/d307fd4776467c07b118ec57fb5e583583b5338cdd7b3ceb0afb3919d7af8eb8.mp4" data-poster="assets/native-fisheye/e6ad967a613c538fbcf2cd6afba7dd90855a15645e04b7fbff57888bbee9c00b.webp">Ground Truth</option><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/85758d17af3befad7eff72ee0c86885dccd8093e85f600acc5b28b3ee36352fd.mp4" data-poster="assets/native-fisheye/05691c5cec5d3c368f07239954e3c35f95eb393722e0e797320ce61227f4a752.webp" selected>RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/e123017d90ebb7226481b70e4efc9b3d4eadde1cf933c9f9c2d05362def9edbc.mp4" data-poster="assets/native-fisheye/28a6fa499fa5b241afc2af6d3b8b64d86140900f638c339a884c52711089c63f.webp">SANA-WM (Raw Fisheye)</option></select></div>
-      <div class="world-frame" style="aspect-ratio:640/352">
-        <video class="world-ours world-reference" muted playsinline preload="none"
-          width="640" height="352" data-video="assets/native-fisheye/85758d17af3befad7eff72ee0c86885dccd8093e85f600acc5b28b3ee36352fd.mp4"
-          data-poster="assets/native-fisheye/05691c5cec5d3c368f07239954e3c35f95eb393722e0e797320ce61227f4a752.webp" aria-label="RecallWorld (Raw Fisheye): Station Approach (120° FoV)"></video>
-        <video class="world-baseline world-selected" muted playsinline preload="none"
-          width="640" height="352" data-poster="assets/native-fisheye/28a6fa499fa5b241afc2af6d3b8b64d86140900f638c339a884c52711089c63f.webp"
-          aria-label="Selected method: Station Approach (120° FoV)"></video>
-        <span class="world-label baseline-label">SANA-WM<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-label ours-label">RecallWorld<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-divider" aria-hidden="true"></span>
-        <input class="world-range" type="range" min="0" max="100" value="50"
-          aria-label="Compare Station Approach (120° FoV)">
-      </div>
-      <p class="world-status" role="status" hidden>The videos could not load.
-        Please refresh to retry.</p>
-    </article></div>
+        aria-hidden="true" hidden><div class="tri-stage" data-src="assets/native-fisheye/tri-aec5cf8ad6fb65e5.mp4" data-poster="assets/native-fisheye/tri-aec5cf8ad6fb65e5.webp" title="Click to pause or play"><video class="quad-source" muted playsinline preload="none" aria-hidden="true"></video><canvas class="quad-canvas" role="img" aria-label="Station Approach: RecallWorld (top left) and SANA-WM (bottom left) from a raw 120° fisheye input, ground truth on the right"></canvas><span class="tri-label tri-label-tl"><span class="tri-pill tri-ours">RecallWorld (Ours)</span></span><span class="tri-label tri-label-bl"><span class="tri-pill">SANA-WM</span></span><span class="tri-label tri-label-tr"><span class="tri-pill">Ground Truth</span></span><span class="tri-label tri-label-br"><span class="tri-pill">Raw 120° Fisheye Input</span></span><span class="tri-line tri-line-x" aria-hidden="true"></span><span class="tri-line tri-line-y" aria-hidden="true"></span><button type="button" class="quad-handle" aria-label="Move the comparison dividers with arrow keys; Space pauses"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26m-17-9 4-4 4 4m-8 18 4 4 4-4M7 12l-4 4 4 4m18-8 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
 <div id="fisheye-comparison-10" class="fisheye-comparison" data-gallery-page="native-10"
-        aria-hidden="true" hidden>
-        <article class="world-card" data-case="grandtour-f9573c50b4835dbb">
-      <div class="native-input-heading"><h3>Forest Path (120° FoV)</h3></div>
-      <div class="world-toolbar"><select class="world-method-left" aria-label="Left method for Forest Path (120° FoV)"><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/cf9a222c08fdc5413dd066e0aa1bf408555a8b9a51424800bb65b1fc9dc29d69.mp4" data-poster="assets/native-fisheye/49f81881a31477e86eda426cc748049e84d62eb1aeaf8a6d8342d21a16baa962.webp">RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/f3013703abed64aa56c6e37eaf52d3efa97fab689c877e402d39d9af25dfd003.mp4" data-poster="assets/native-fisheye/2a494d20bbd4f9ce821b5bd61f0c9b1da17d87a9f737303698891c5f52852366.webp" selected>SANA-WM (Raw Fisheye)</option><option value="gt" data-video="assets/native-fisheye/d794ac07cb850e3f4967059bf6ef4975670ae1c335362bc22c6a7b4d7582caa1.mp4" data-poster="assets/native-fisheye/29cee03ca0460ae85b4d7715bff18ac6c105a7a13392bebc0854545e901d4016.webp">Ground Truth</option></select>
-        <select class="world-method-right" aria-label="Right method for Forest Path (120° FoV)"><option value="gt" data-video="assets/native-fisheye/d794ac07cb850e3f4967059bf6ef4975670ae1c335362bc22c6a7b4d7582caa1.mp4" data-poster="assets/native-fisheye/29cee03ca0460ae85b4d7715bff18ac6c105a7a13392bebc0854545e901d4016.webp">Ground Truth</option><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/cf9a222c08fdc5413dd066e0aa1bf408555a8b9a51424800bb65b1fc9dc29d69.mp4" data-poster="assets/native-fisheye/49f81881a31477e86eda426cc748049e84d62eb1aeaf8a6d8342d21a16baa962.webp" selected>RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/f3013703abed64aa56c6e37eaf52d3efa97fab689c877e402d39d9af25dfd003.mp4" data-poster="assets/native-fisheye/2a494d20bbd4f9ce821b5bd61f0c9b1da17d87a9f737303698891c5f52852366.webp">SANA-WM (Raw Fisheye)</option></select></div>
-      <div class="world-frame" style="aspect-ratio:640/352">
-        <video class="world-ours world-reference" muted playsinline preload="none"
-          width="640" height="352" data-video="assets/native-fisheye/cf9a222c08fdc5413dd066e0aa1bf408555a8b9a51424800bb65b1fc9dc29d69.mp4"
-          data-poster="assets/native-fisheye/49f81881a31477e86eda426cc748049e84d62eb1aeaf8a6d8342d21a16baa962.webp" aria-label="RecallWorld (Raw Fisheye): Forest Path (120° FoV)"></video>
-        <video class="world-baseline world-selected" muted playsinline preload="none"
-          width="640" height="352" data-poster="assets/native-fisheye/2a494d20bbd4f9ce821b5bd61f0c9b1da17d87a9f737303698891c5f52852366.webp"
-          aria-label="Selected method: Forest Path (120° FoV)"></video>
-        <span class="world-label baseline-label">SANA-WM<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-label ours-label">RecallWorld<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-divider" aria-hidden="true"></span>
-        <input class="world-range" type="range" min="0" max="100" value="50"
-          aria-label="Compare Forest Path (120° FoV)">
-      </div>
-      <p class="world-status" role="status" hidden>The videos could not load.
-        Please refresh to retry.</p>
-    </article></div>
+        aria-hidden="true" hidden><div class="tri-stage" data-src="assets/native-fisheye/tri-af520d773f955b50.mp4" data-poster="assets/native-fisheye/tri-af520d773f955b50.webp" title="Click to pause or play"><video class="quad-source" muted playsinline preload="none" aria-hidden="true"></video><canvas class="quad-canvas" role="img" aria-label="Forest Path: RecallWorld (top left) and SANA-WM (bottom left) from a raw 120° fisheye input, ground truth on the right"></canvas><span class="tri-label tri-label-tl"><span class="tri-pill tri-ours">RecallWorld (Ours)</span></span><span class="tri-label tri-label-bl"><span class="tri-pill">SANA-WM</span></span><span class="tri-label tri-label-tr"><span class="tri-pill">Ground Truth</span></span><span class="tri-label tri-label-br"><span class="tri-pill">Raw 120° Fisheye Input</span></span><span class="tri-line tri-line-x" aria-hidden="true"></span><span class="tri-line tri-line-y" aria-hidden="true"></span><button type="button" class="quad-handle" aria-label="Move the comparison dividers with arrow keys; Space pauses"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26m-17-9 4-4 4 4m-8 18 4 4 4-4M7 12l-4 4 4 4m18-8 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
 <div id="fisheye-comparison-11" class="fisheye-comparison" data-gallery-page="native-11"
-        aria-hidden="true" hidden>
-        <article class="world-card" data-case="m2dgr-362a634c0881dd37">
-      <div class="native-input-heading"><h3>Campus Avenue (190° FoV)</h3></div>
-      <div class="world-toolbar"><select class="world-method-left" aria-label="Left method for Campus Avenue (190° FoV)"><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/a2f30511803d664f64eca03de5d1b488a95e28f9b3d9bf4d533e441d366bb39a.mp4" data-poster="assets/native-fisheye/5a4975bd3037fb3c6b559ae968eea2eddde6d6c9589274538221db0e2d2118b7.webp">RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/7c6e9281fd8f994c68e8cc583f8f4e9cda7da582848e3e7050bfafaddf87c628.mp4" data-poster="assets/native-fisheye/bd9a865278bd27769333d4e7d0081168fd823b2c768a4d7797907bdd9fa0b69f.webp" selected>SANA-WM (Raw Fisheye)</option><option value="gt" data-video="assets/native-fisheye/e01b37bb2eb6f0c48ae05d3bbdb7dd13f33410d42bfbf38ae4d73bb0415b82e9.mp4" data-poster="assets/native-fisheye/91e588debeb01c8bac314d7497029112a053350ef43c612085a3109049693176.webp">Ground Truth</option></select>
-        <select class="world-method-right" aria-label="Right method for Campus Avenue (190° FoV)"><option value="gt" data-video="assets/native-fisheye/e01b37bb2eb6f0c48ae05d3bbdb7dd13f33410d42bfbf38ae4d73bb0415b82e9.mp4" data-poster="assets/native-fisheye/91e588debeb01c8bac314d7497029112a053350ef43c612085a3109049693176.webp">Ground Truth</option><option data-model="RecallWorld" data-detail="Raw Fisheye" value="navworld" data-video="assets/native-fisheye/a2f30511803d664f64eca03de5d1b488a95e28f9b3d9bf4d533e441d366bb39a.mp4" data-poster="assets/native-fisheye/5a4975bd3037fb3c6b559ae968eea2eddde6d6c9589274538221db0e2d2118b7.webp" selected>RecallWorld (Raw Fisheye)</option><option data-model="SANA-WM" data-detail="Raw Fisheye" value="sana_raw" data-video="assets/native-fisheye/7c6e9281fd8f994c68e8cc583f8f4e9cda7da582848e3e7050bfafaddf87c628.mp4" data-poster="assets/native-fisheye/bd9a865278bd27769333d4e7d0081168fd823b2c768a4d7797907bdd9fa0b69f.webp">SANA-WM (Raw Fisheye)</option></select></div>
-      <div class="world-frame" style="aspect-ratio:640/352">
-        <video class="world-ours world-reference" muted playsinline preload="none"
-          width="640" height="352" data-video="assets/native-fisheye/a2f30511803d664f64eca03de5d1b488a95e28f9b3d9bf4d533e441d366bb39a.mp4"
-          data-poster="assets/native-fisheye/5a4975bd3037fb3c6b559ae968eea2eddde6d6c9589274538221db0e2d2118b7.webp" aria-label="RecallWorld (Raw Fisheye): Campus Avenue (190° FoV)"></video>
-        <video class="world-baseline world-selected" muted playsinline preload="none"
-          width="640" height="352" data-poster="assets/native-fisheye/bd9a865278bd27769333d4e7d0081168fd823b2c768a4d7797907bdd9fa0b69f.webp"
-          aria-label="Selected method: Campus Avenue (190° FoV)"></video>
-        <span class="world-label baseline-label">SANA-WM<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-label ours-label">RecallWorld<small class="world-label-detail">(Raw Fisheye)</small></span>
-        <span class="world-divider" aria-hidden="true"></span>
-        <input class="world-range" type="range" min="0" max="100" value="50"
-          aria-label="Compare Campus Avenue (190° FoV)">
-      </div>
-      <p class="world-status" role="status" hidden>The videos could not load.
-        Please refresh to retry.</p>
-    </article></div>
+        aria-hidden="true" hidden><div class="tri-stage" data-src="assets/native-fisheye/tri-e37bf6bddcb439bc.mp4" data-poster="assets/native-fisheye/tri-e37bf6bddcb439bc.webp" title="Click to pause or play"><video class="quad-source" muted playsinline preload="none" aria-hidden="true"></video><canvas class="quad-canvas" role="img" aria-label="Campus Avenue: RecallWorld (top left) and SANA-WM (bottom left) from a raw 190° fisheye input, ground truth on the right"></canvas><span class="tri-label tri-label-tl"><span class="tri-pill tri-ours">RecallWorld (Ours)</span></span><span class="tri-label tri-label-bl"><span class="tri-pill">SANA-WM</span></span><span class="tri-label tri-label-tr"><span class="tri-pill">Ground Truth</span></span><span class="tri-label tri-label-br"><span class="tri-pill">Raw 190° Fisheye Input</span></span><span class="tri-line tri-line-x" aria-hidden="true"></span><span class="tri-line tri-line-y" aria-hidden="true"></span><button type="button" class="quad-handle" aria-label="Move the comparison dividers with arrow keys; Space pauses"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26m-17-9 4-4 4 4m-8 18 4 4 4-4M7 12l-4 4 4 4m18-8 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div>
       </div>
     </div>
   </div>

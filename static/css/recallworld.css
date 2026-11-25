@@ -3287,3 +3287,37 @@ html[data-theme="dark"]  { --arrow: #e2e4e9; --bg-chip: #1e1e1e; --text-heading:
 .result-tab[aria-selected="true"]:hover  { background: #941f30; border-color: #c66a7d; color: #fff; }
 @media (hover: none)  { .result-tab:hover  { transform: none; box-shadow: none; } }
 @media (prefers-reduced-motion: reduce)  { .result-tab  { transition: none; } .result-tab:hover  { transform: none; } }
+
+/* Three-way fisheye comparison (see js/tri-fisheye-*.js). */
+.tri-stage  {
+  --split-x: 50%;
+  --split-y: 50%;
+  position: relative;
+  aspect-ratio: 640 / 352;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  box-shadow: 0 12px 32px #0003;
+  cursor: crosshair;
+  touch-action: pan-y;
+}
+.tri-stage .quad-source  { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.tri-stage .quad-canvas  { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.tri-label  { position: absolute; z-index: 2; pointer-events: none; font: 500 clamp(12px, 1.3vw, 17px) / 1.15 "Google Sans", "Noto Sans", sans-serif; }
+.tri-label-tl  { left: 10px; top: 10px; }
+.tri-label-bl  { left: 10px; bottom: 10px; }
+.tri-label-tr  { right: 10px; top: 10px; }
+.tri-label-br  { right: 10px; bottom: 10px; }
+.tri-pill  { display: block; padding: .3em .6em; border-radius: 6px; background: rgba(0, 0, 0, .55); color: #fff; font-weight: 600; white-space: nowrap; }
+.tri-pill.tri-ours  { background: #941f30e0; }
+.tri-line  { position: absolute; z-index: 3; background: #fff; pointer-events: none; box-shadow: 0 0 3px #0009; }
+.tri-line-x  { left: var(--split-x); top: 0; bottom: 0; width: 2px; transform: translateX(-50%); }
+.tri-line-y  { top: var(--split-y); left: 0; width: var(--split-x); height: 2px; transform: translateY(-50%); }
+.tri-stage .quad-handle  { position: absolute; left: var(--split-x); top: var(--split-y); transform: translate(-50%, -50%); z-index: 4; }
+@media (max-width: 600px)  {
+  .tri-label-tl, .tri-label-tr  { top: 6px; }
+  .tri-label-bl, .tri-label-br  { bottom: 6px; }
+  .tri-label-tl, .tri-label-bl  { left: 6px; }
+  .tri-label-tr, .tri-label-br  { right: 6px; }
+  .tri-pill  { padding: .2em .45em; }
+}
