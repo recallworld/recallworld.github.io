@@ -3148,3 +3148,18 @@ html[data-theme="dark"] #theme-toggle:hover .theme-icon-moon  { transform: trans
 .footer .icon-link:hover, .footer .icon-link:focus-visible  { color: #941f30; }
 html[data-theme="dark"] .footer .icon-link:hover, html[data-theme="dark"] .footer .icon-link:focus-visible  { color: var(--brand-text); }
 .footer .content a:not(.icon-link):not(.plain-link):not([aria-label="Website source code"])  { color: var(--link-color); }
+#results-carousel .result-slide  { align-self: stretch; }
+
+/* Explore the Worlds: the incoming gallery page slides in from the side it came from. */
+@keyframes worlds-in-next  { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
+@keyframes worlds-in-prev  { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: none; } }
+#gallery[data-gallery-animate="true"][data-gallery-dir="next"] [data-gallery-page]:not([hidden])  { animation: worlds-in-next .38s cubic-bezier(.4, 0, .2, 1); }
+#gallery[data-gallery-animate="true"][data-gallery-dir="prev"] [data-gallery-page]:not([hidden])  { animation: worlds-in-prev .38s cubic-bezier(.4, 0, .2, 1); }
+@media (prefers-reduced-motion: reduce)  { #gallery [data-gallery-page]  { animation: none !important; } }
+
+/* Larger method pills on the fisheye comparisons (HTML labels, not baked into video). */
+.native-world-grid .world-label, #native-fisheye-gallery .world-card .world-label  {
+  font-size: clamp(14px, 1.6vw, 18px);
+  max-width: calc(50% - 20px);
+}
+#native-fisheye-gallery .world-label-detail  { font-size: .78em; }

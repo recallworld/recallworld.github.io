@@ -7,7 +7,10 @@
   const nav = root.querySelector(".worlds-navigation");
   let selected = 0, pointer = null, suppressClick = false;
   function show(index) {
+    const previous = selected;
     selected = (index + pages.length) % pages.length;
+    // Direction for the slide-in animation (CSS); none on the first render.
+    root.dataset.galleryDir = index > previous ? "next" : "prev";
     pages.forEach((page, i) => {
       page.hidden = i !== selected;
       page.setAttribute("aria-hidden", String(i !== selected));
@@ -47,5 +50,6 @@
   }, true);
   nav.addEventListener("pointercancel", () => {pointer = null;});
   show(0);
+  root.dataset.galleryAnimate = "true";
   document.documentElement.dataset.worldsGallerySets = String(pages.length);
 })();
