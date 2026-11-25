@@ -1,11 +1,10 @@
-/* Native scrolling, buttons, touch swipes and keyboard navigation; no library. */
+/* Native scrolling, tab buttons, touch swipes and keyboard navigation; no library. */
 (() => {
   const root = document.querySelector("#results-carousel");
   if (!root) return;
   const viewport = root.querySelector(".results-viewport");
   const slides = [...root.querySelectorAll(".result-slide")];
   const tabs = [...root.querySelectorAll(".result-tab")];
-  const position = root.querySelector(".results-position");
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   let active = 0;
   let scheduled = false;
@@ -23,7 +22,6 @@
       slide.setAttribute("aria-hidden", String(i !== index));
     });
     viewport.style.height = slides[index].offsetHeight + "px";
-    position.textContent = `${index + 1} / ${slides.length}`;
   }
 
   function select(index, focus = false) {
@@ -35,8 +33,6 @@
   }
 
   tabs.forEach((tab, i) => tab.addEventListener("click", () => select(i)));
-  root.querySelector("[data-results-previous]").addEventListener("click", () => select(active - 1));
-  root.querySelector("[data-results-next]").addEventListener("click", () => select(active + 1));
   root.addEventListener("keydown", event => {
     if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
     // A wide table retains its own horizontal scrolling.
