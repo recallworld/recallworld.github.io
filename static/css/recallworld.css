@@ -3189,3 +3189,30 @@ html.theme-anim, html.theme-anim *, html.theme-anim *::before, html.theme-anim *
   transition: background-color .35s ease, color .35s ease, border-color .35s ease, box-shadow .35s ease, fill .35s ease !important;
 }
 html.theme-anim .theme-icon  { transition: transform .6s ease, opacity .6s ease !important; }
+
+/* Header buttons: GOFish motion (ease, 2px lift on hover, press back on click). */
+.publication-links .button  {
+  transition: background-color .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.publication-links .button:hover  { transform: translateY(-2px); }
+.publication-links .button:active  { transform: translateY(0); box-shadow: 0 1px 4px #941f3030; }
+
+/* Footer PDF and arXiv icons take the header buttons' maroon highlight: same lift,
+   maroon glyph and a maroon glow instead of a grey one. */
+.footer .icon-link:hover, .footer .icon-link:focus-visible  {
+  color: #941f30;
+  transform: translateY(-3px);
+  filter: drop-shadow(0 3px 8px #941f3055);
+}
+html[data-theme="dark"] .footer .icon-link:hover, html[data-theme="dark"] .footer .icon-link:focus-visible  {
+  color: #e58a9b;
+  filter: drop-shadow(0 3px 8px #e58a9b55);
+}
+.footer .icon-link:active  { transform: translateY(0); }
+@media (hover: none)  {
+  .publication-links .button:hover, .footer .icon-link:hover  { transform: none; filter: none; }
+}
+@media (prefers-reduced-motion: reduce)  {
+  .publication-links .button, .footer .icon-link  { transition: none; }
+  .publication-links .button:hover, .footer .icon-link:hover  { transform: none; }
+}
