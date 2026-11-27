@@ -3087,6 +3087,20 @@ html[data-theme="dark"] #bibtex .bibtex-container  {
   margin: 0 0 .5rem;
 }
 .colophon-marks  { white-space: nowrap; }
+.footer .back-to-top  {
+  display: inline-flex;
+  align-items: center;
+  gap: .25em;
+  white-space: nowrap;
+}
+.footer .back-to-top svg  {
+  width: .85em;
+  height: .85em;
+}
+.footer .back-to-top:focus-visible  {
+  outline: 2px solid var(--link-color);
+  outline-offset: 3px;
+}
 .footer .colophon .colophon-toggle  {
   -webkit-appearance: none;
   appearance: none;
